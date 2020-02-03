@@ -1,5 +1,5 @@
 const endpoint =
-  "https://api.spoonacular.com/recipes/complexSearch?query=pasta&diet=vegan&number=2";
+  "https://api.spoonacular.com/recipes/random?number=1&tags=vegetarian,dessert";
 const apiKey = "28ff3a78659d4701a49c3345bc23c33b";
 const apiLink = endpoint + "&apiKey=" + apiKey + "&format=json";
 
