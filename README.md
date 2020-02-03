@@ -10,10 +10,10 @@ https://wafs.netlify.com/
 
 <!-- toc -->
 
-- [Concept](#concept)
-- [Installation](#installation)
-- [Actor diagram](#actor diagram)
-- [Interaction diagram](#interaction diagram)
+- [Concept](#Concept)
+- [Installation](#Installation)
+- [Actor diagram](#Actor diagram)
+- [Interaction diagram](#Interaction diagram)
 - [Design patterns](#interaction diagram)
 - [Best practices](#best practices)
 - [Data](#data)
@@ -74,11 +74,11 @@ afbeelding
 
 ## Data
 
-### Fitbit REST API v1
+### Food API
 
-The API I've used is [Fitbit's](https://www.programmableweb.com/api/fitbit-rest-api-v1).
+The API I've used is [Spoonacular's](https://spoonacular.com/food-api/docs).
 Which API is used and what are the limitations? (rate limit)
-iets van uitleg over de api
+[iets van uitleg over de api]
 
 ### Data cleaning
 
