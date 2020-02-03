@@ -1,3 +1,4 @@
+// https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
 const endpoint = "https://api.spoonacular.com/recipes/random?number=1";
 const apiKey = "28ff3a78659d4701a49c3345bc23c33b";
 const tags = "&tags=vegetarian,dessert";
@@ -7,10 +8,14 @@ fetch(apiLink)
   .then(res => res.json())
   .then(json => {
     const rawData = json.recipes;
-    // const rawData = JSON.parse('json.recipes');
-    const results = filterArray(rawData);
-    console.log(results);
+    const data = filterArray(rawData);
+    // pleur de data in een string en yeet 'm vervolgens in localStorage onder "recipes"
+    localStorage.setItem("recipes", JSON.stringify(data));
   });
+
+// haal "recipes" op uit localStorage en parse ze in JSON zodat 't weer bruikbaar is (getest met wifi uitgezet)
+const results = JSON.parse(localStorage.getItem("recipes"));
+console.log(results);
 
 function filterArray(array) {
   return array.map(results => {
