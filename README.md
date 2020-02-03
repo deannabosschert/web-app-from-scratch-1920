@@ -1,6 +1,6 @@
 ## Web App From Scratch @cmda-minor-web 1819
 
-# Projectnaam
+# Food stuff
 
 https://wafs.netlify.com/
 [screenshot]
@@ -12,10 +12,10 @@ https://wafs.netlify.com/
 
 - [Concept](#Concept)
 - [Installation](#Installation)
-- [Actor diagram](#Actor diagram)
-- [Interaction diagram](#Interaction diagram)
-- [Design patterns](#interaction diagram)
-- [Best practices](#best practices)
+- [Actor diagram](#Actordiagram)
+- [Interaction diagram](#Interactiondiagram)
+- [Design patterns](#interactiondiagram)
+- [Best practices](#bestpractices)
 - [Data](#data)
 - [Features](#features)
 - [Assignment](#assignment)
