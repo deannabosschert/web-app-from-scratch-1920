@@ -9,7 +9,7 @@ const limit = "1";
 const apiLink = endpoint + limit + tags + "&apiKey=" + apiKey + "&format=json";
 
 fetch(apiLink)
-  // .then(res => res.json()) // errhandling nog adden
+  // .then(res => res.json()) // correcte errhandling nog adden, zie linkje van Joost/Laurens in slack
   .then(function(res) {
     if (res.status === 200) {
       return res.json();
@@ -19,8 +19,6 @@ fetch(apiLink)
   })
   .then(function(json) {
     const results = json.recipes;
-    // console.log(res.status); // returns 200
-
     const data = filterArray(results);
     // pleur de data in een string en yeet 'm vervolgens in localStorage onder "recipes"
     return localStorage.setItem("recipes", JSON.stringify(data));
