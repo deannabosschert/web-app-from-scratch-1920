@@ -5,14 +5,14 @@ const apiKey = "28ff3a78659d4701a49c3345bc23c33b";
 // const apiKey2 - "6ccc29bb070043dd937ef1f10dc714d3"
 // const apiKey3 = "3a0c7279c9fb4eaa96146d10ea2d6cdd"
 // const apiKey4 = "159149e54e984717be8dccce8fc3d6c9"
-const limit = "?number=1"
+const limit = "?number=1";
 const apiLink = endpoint + limit + tags + "&apiKey=" + apiKey + "&format=json";
 
 fetch(apiLink)
-  .then(res => res.json())
+  .then(res => res.json()) // errhandling nog adden
   .then(json => {
-    const rawData = json.recipes;
-    const data = filterArray(rawData);
+    const response = json.recipes;
+    const data = filterArray(response);
     // pleur de data in een string en yeet 'm vervolgens in localStorage onder "recipes"
     localStorage.setItem("recipes", JSON.stringify(data));
   });
@@ -21,9 +21,25 @@ fetch(apiLink)
 const results = JSON.parse(localStorage.getItem("recipes"));
 console.log(results);
 
-const d1 = document.getElementById("one");
-d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
+const root = document.getElementById("recipe");
+// d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
+// if (response.status >= 200 && response.status < 400) {
+results.forEach(results => {
+  root.insertAdjacentHTML(
+    "afterend",
+    "<h2>" +
+      results.title +
+      "</h2><h3>" +
+      results.instructions +
+      '</h3><img src="' +
+      results.img +
+      '">'
+  );
+});
+// } else {
+// console.log('error')
+// }
 
 function filterArray(array) {
   return array.map(results => {
