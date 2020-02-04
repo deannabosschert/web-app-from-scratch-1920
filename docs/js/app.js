@@ -29,7 +29,7 @@ fetch(apiLink)
 const results = JSON.parse(localStorage.getItem("recipes"));
 console.log(results);
 const root = document.getElementById("recipe");
-
+root.innerHTML = "";
 results.forEach(results => {
   root.insertAdjacentHTML(
     "afterend",
