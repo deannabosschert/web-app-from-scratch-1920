@@ -10,10 +10,7 @@ const apiLink = endpoint + limit + tags + "&apiKey=" + apiKey + "&format=json";
 
 fetch(apiLink)
   // .then(res => res.json()) // correcte errhandling nog adden, zie linkje van Joost/Laurens in slack
-<<<<<<< HEAD
   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
-=======
->>>>>>> 506be7adeeae5fba396fe26d6fe0bf5d5aa1f3ca
   .then(function(res) {
     if (res.status === 200) {
       return res.json();
