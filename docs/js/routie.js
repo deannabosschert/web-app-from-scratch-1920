@@ -1,4 +1,10 @@
-// source: https://github.com/jgallen23/routie/blob/master
+/*!
+ * routie - a tiny hash router
+ * v0.3.2
+ * http://projects.jga.me/routie
+ * copyright Greg Allen 2016
+ * MIT License
+ */
 var Routie = function(w, isModule) {
   var routes = [];
   var map = {};
@@ -80,7 +86,10 @@ var Routie = function(w, isModule) {
         capture,
         optional
       ) {
-        keys.push({ name: key, optional: !!optional });
+        keys.push({
+          name: key,
+          optional: !!optional
+        });
         slash = slash || "";
         return (
           "" +
