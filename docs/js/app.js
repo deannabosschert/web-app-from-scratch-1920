@@ -5,7 +5,7 @@ const apiKey = "28ff3a78659d4701a49c3345bc23c33b";
 // const apiKey2 - "6ccc29bb070043dd937ef1f10dc714d3"
 // const apiKey3 = "3a0c7279c9fb4eaa96146d10ea2d6cdd"
 // const apiKey4 = "159149e54e984717be8dccce8fc3d6c9"
-const limit = "1";
+const limit = "3";
 const apiLink = endpoint + limit + tags + "&apiKey=" + apiKey + "&format=json";
 
 fetch(apiLink)
