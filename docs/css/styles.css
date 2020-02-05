@@ -8,7 +8,9 @@
 * {
   box-sizing: border-box;
 }
-
+a {
+  font-size: 3rem;
+}
 html {
   margin: 0;
   padding: 0;
