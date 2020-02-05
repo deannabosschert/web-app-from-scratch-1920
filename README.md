@@ -5,6 +5,8 @@
 https://wafs.netlify.com/
 [screenshot]
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/wafs/deploys)
+
 <details>
   <summary><strong>Table of Contents</strong> (click to expand)</summary>
 
