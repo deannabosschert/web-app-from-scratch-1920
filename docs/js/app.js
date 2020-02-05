@@ -64,7 +64,7 @@ function filterArray(array) {
 var router = {
   handle: function() {
     routie(
-      "*",
+      "/",
       function() {
         console.log("alles");
       },
