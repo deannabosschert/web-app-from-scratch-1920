@@ -36,9 +36,9 @@ results.forEach(results => {
     "<article>" +
       "<h2>" +
       results.title +
-      "</h2><h3>" +
+      "</h2><p>" +
       results.instructions +
-      '</h3><img src="' +
+      '</p><img src="' +
       results.img +
       '">' +
       "</article>"
