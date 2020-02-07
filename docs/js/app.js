@@ -33,13 +33,15 @@ root.innerHTML = "";
 results.forEach(results => {
   root.insertAdjacentHTML(
     "afterend",
-    "<h2>" +
+    "<article>" +
+      "<h2>" +
       results.title +
       "</h2><h3>" +
       results.instructions +
       '</h3><img src="' +
       results.img +
-      '">'
+      '">' +
+      "</article>"
   );
 });
 
