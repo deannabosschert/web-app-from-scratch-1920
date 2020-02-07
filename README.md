@@ -27,6 +27,13 @@ https://wafs.netlify.com/
 
 </details>
 
+## To-do
+
+- [ ] Refactor code (all global now), but I'll save that for when I've fixed routing
+- [ ] Functional shizzle
+- [ ] Add info about API (rate limit, etc)
+- [ ] Add error handling
+
 ## Concept
 
 What does your app do, what is the goal? (passing butter)
