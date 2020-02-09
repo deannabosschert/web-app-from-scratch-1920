@@ -30,7 +30,9 @@ const results = JSON.parse(localStorage.getItem("recipes"));
 console.log(results);
 const root = document.getElementById("recipe");
 root.innerHTML = "";
+
 results.forEach(results => {
+  // niet beter een array.map voor gebruiken?
   root.insertAdjacentHTML(
     "afterend",
     "<article>" +
