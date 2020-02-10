@@ -3,21 +3,17 @@
 // import Router from "./routie.js";
 // const router = require("router");
 
-const endpoint =
-  "https://api.github.com/repos/cmda-minor-web/web-app-from-scratch-1920/forks?per_page=50";
-
-const tags = "&tags=dessert";
-const user = "deannabosschert";
-// const apiKey = "28ff3a78659d4701a49c3345bc23c33b";
-// const apiKey = "6ccc29bb070043dd937ef1f10dc714d3";
-// const apiKey3 = "3a0c7279c9fb4eaa96146d10ea2d6cdd"
-const apiKey = "159149e54e984717be8dccce8fc3d6c9";
-const limit = "3";
+const endpoint = "https://api.github.com";
+const minor = "/cmda-minor-web";
+const course = "/web-app-from-scratch-";
+const year = "1920";
+const tag = "/forks";
+const limit = "50";
 const url = `https://api.github.com/repos/cmda-minor-web/web-app-from-scratch-1920/forks?per_page=50`;
-// const apiLink = endpoint + limit + tags + "&apiKey=" + apiKey + "&format=json";
-// const apiLink = endpoint + limit + tags + "&apiKey=" + apiKey + "&format=json";
-//
-fetch(url)
+const apiLink =
+  endpoint + "/repos" + minor + course + year + tag + "?per_page=" + limit;
+
+fetch(apiLink)
   // .then(res => res.json()) // correcte errhandling nog adden, zie linkje van Joost/Laurens in slack
   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
   .then(function(res) {
