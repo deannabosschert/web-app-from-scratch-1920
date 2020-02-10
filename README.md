@@ -40,10 +40,10 @@ What does your app do, what is the goal? (passing butter)
 
 ## Installation
 
-Idk, gewoon repo clonen?
+This repository doesn't have any dependencies.
 
 ```bash
-npm install
+$ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 ```
 
 ```json
@@ -88,6 +88,16 @@ How does flowed interaction through the application? (interaction diagram)
 The API I've used is [Spoonacular's](https://spoonacular.com/food-api/docs).
 Which API is used and what are the limitations? (rate limit)
 [iets van uitleg over de api]
+
+#### Rate limiting
+
+For API requests using Basic Authentication or OAuth, you can make up to 5000 requests per hour. Authenticated requests are associated with the authenticated user, regardless of whether Basic Authentication or an OAuth token was used. This means that all OAuth applications authorized by a user share the same quota of 5000 requests per hour when they authenticate with different tokens owned by the same user.
+
+For unauthenticated requests, the rate limit allows for up to 60 requests per hour. Unauthenticated requests are associated with the originating IP address, and not the user making requests.
+
+Note that the Search API has custom rate limit rules.
+
+The returned HTTP headers of any API request show your current rate limit status:
 
 ### Data cleaning
 
