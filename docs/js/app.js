@@ -20,16 +20,13 @@ fetch(apiLink)
     return res.json();
   })
   .then(function(json) {
-    console.log(json);
     const data = filterArray(json);
-    console.log(data);
     // pleur de data in een string en yeet 'm vervolgens in localStorage onder "recipes"
     return localStorage.setItem("repos", JSON.stringify(data));
   });
 
 // haal "recipes" op uit localStorage en parse ze in JSON zodat 't weer bruikbaar is (getest met wifi uitgezet)
 const results = JSON.parse(localStorage.getItem("repos"));
-console.log(results);
 const root = document.getElementById("one");
 root.innerHTML = "";
 
@@ -48,8 +45,9 @@ results.forEach(results => {
       results.avatar +
       '">' +
       "<p>" +
-      results.name +
-      "</p></article>"
+      results.id +
+      "</p>" +
+      "</article>"
   );
 });
 
@@ -60,7 +58,7 @@ function filterArray(array) {
       description: results.description,
       avatar: results.owner.avatar_url,
       homepage: results.homepage,
-      // dishtypes: results.dishTypes,
+      id: results.id,
       // vegetarian: results.vegetarian,
       // vegan: results.vegan,
       // glutenFree: results.glutenFree,
