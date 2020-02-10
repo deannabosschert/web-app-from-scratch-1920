@@ -47,7 +47,9 @@ results.forEach(results => {
       '</p></a><img src="' +
       results.avatar +
       '">' +
-      "</article>"
+      "<p>" +
+      results.name +
+      "</p></article>"
   );
 });
 
