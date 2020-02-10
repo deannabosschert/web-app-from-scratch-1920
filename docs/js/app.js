@@ -1,14 +1,14 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
 
-import Router from "./routie.js";
+// import Router from "./routie.js";
 // const router = require("router");
 
 const endpoint = "https://api.spoonacular.com/recipes/random?number=";
-const tags = "&tags=vegetarian,dessert";
+const tags = "&tags=dessert";
 // const apiKey = "28ff3a78659d4701a49c3345bc23c33b";
-const apiKey = "6ccc29bb070043dd937ef1f10dc714d3";
+// const apiKey = "6ccc29bb070043dd937ef1f10dc714d3";
 // const apiKey3 = "3a0c7279c9fb4eaa96146d10ea2d6cdd"
-// const apiKey4 = "159149e54e984717be8dccce8fc3d6c9"
+const apiKey = "159149e54e984717be8dccce8fc3d6c9";
 const limit = "3";
 const apiLink = endpoint + limit + tags + "&apiKey=" + apiKey + "&format=json";
 
@@ -66,20 +66,20 @@ function filterArray(array) {
     };
   });
 }
-
-var router = {
-  handle: function() {
-    routie(
-      "/",
-      function() {
-        console.log("alles");
-      },
-      ":id",
-      function() {
-        console.log(id);
-      }
-    );
-  }
-};
-
-router.handle();
+//
+// var router = {
+//   handle: function() {
+//     routie(
+//       "/",
+//       function() {
+//         console.log("alles");
+//       },
+//       ":id",
+//       function() {
+//         console.log(id);
+//       }
+//     );
+//   }
+// };
+//
+// router.handle();
