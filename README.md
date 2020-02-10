@@ -62,12 +62,12 @@ npm install
 ## Actor Diagram
 
 Which actors are there in your application? (actor diagram)
-![actor diagram](https://github.com/deannabosschert/web-app-from-scratch/blob/master/docs/img/actordiagram.png)
+![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/actordiagram.png)
 
 ## Interaction diagram
 
 How does flowed interaction through the application? (interaction diagram)
-![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch/blob/master/docs/img/interactiondiagram.png)
+![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/interactiondiagram.png)
 
 ## Design patterns
 
