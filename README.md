@@ -1,6 +1,6 @@
 ## Web App From Scratch @cmda-minor-web 1819
 
-# Food stuff
+# Class of 2020
 
 https://wafs.netlify.com/
 [screenshot]
@@ -30,13 +30,18 @@ https://wafs.netlify.com/
 ## To-do
 
 - [ ] Refactor code (all global now), but I'll save that for when I've fixed routing
-- [ ] Functional shizzle
+- [ ] Functional shizzle (refactor)
 - [ ] Add info about API (rate limit, etc)
+- [ ] Add search (in-repo or global? idk yet)
 - [ ] Add error handling
+- [ ] Add function to captitalize usernames
+- [ ] Styling
+- [ ] Add datavisualization
 
 ## Concept
 
 What does your app do, what is the goal? (passing butter)
+This app is for keeping track of the current progress of the Web App From Scratch class in the minor Webdevelopment (2020).
 
 ## Installation
 
@@ -69,6 +74,15 @@ Which actors are there in your application? (actor diagram)
 How does flowed interaction through the application? (interaction diagram)
 ![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/interactiondiagram.png)
 
+- [x] Overview van de huidige klas
+- [ ] Detailpagina per student
+
+- [ ] 'Stats'-pagina:
+- [ ] Leaderboard per ding (aantal commits, aantal fixed issues, aantal openstaande issues)
+- [ ] 'Wie heeft wat wel en wie wat niet' -> stats (branches, wiki, license)
+- [ ] Wie is waar in 't programma'? (check voor bestand met 'router', 'routie', etc)
+- [ ] Wie schrijft bepaalde dingen zelf? (idk if possible, nice to have)
+
 ## Design patterns
 
 - opsomming
@@ -83,9 +97,9 @@ How does flowed interaction through the application? (interaction diagram)
 
 ## Data
 
-### Food API
+### Github API
 
-The API I've used is [Spoonacular's](https://spoonacular.com/food-api/docs).
+The API I've used is [Github's](https://api.github.com).
 Which API is used and what are the limitations? (rate limit)
 [iets van uitleg over de api]
 
