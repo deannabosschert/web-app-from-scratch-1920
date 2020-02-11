@@ -7,6 +7,7 @@ function loadData() {
   const limit = "50";
   const apiLink =
     endpoint + "/repos" + minor + course + year + tag + "?per_page=" + limit;
+  // const url = `${endpoint}/repos${minor}${course}${year}${tag}?per_page=${limit}`;
 
   fetch(apiLink)
     // .then(res => res.json()) // correcte errhandling nog adden, zie linkje van Joost/Laurens in slack
