@@ -27,6 +27,10 @@ fetch(apiLink)
 
 // haal "recipes" op uit localStorage en parse ze in JSON zodat 't weer bruikbaar is (getest met wifi uitgezet)
 const results = JSON.parse(localStorage.getItem("repos"));
+console.log(
+  "%c Test!",
+  "text-transform: uppercase; background: #000; color: #FFF; font-size: 21pt; font-weight: bold; padding: 5px 20px; text-shadow: -2px -2px 0 rgba(251, 1, 252, .7), 2px 2px 0 rgba(4, 251, 246, 0.7)"
+);
 const root = document.getElementById("one");
 root.innerHTML = "";
 console.log(results);
