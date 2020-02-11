@@ -134,6 +134,31 @@ function filterArray(array) {
 //   router.handle();
 // }
 
+
+// function routeDingen() {
+  var router = {
+    handle: function() {
+      routie({
+        'user/:id': id => {
+          console.log(id);
+        },
+        stats: () => {
+          console.log("test1")
+          updateUI('stats');
+        },
+        progress: () => {
+          console.log("test2")
+          updateUI('progress');
+        }
+      });
+    }
+}
+// }
+
+
+router.handle()
+
+
 function render(data) {
   // haal "repos" op uit localStorage en parse ze in JSON zodat 't weer bruikbaar is (getest met wifi uitgezet)
   const results = JSON.parse(localStorage.getItem("repos"));
@@ -142,10 +167,10 @@ function render(data) {
     "text-transform: uppercase; background: #000; color: #FFF; font-size: 21pt; font-weight: bold; padding: 5px 20px; text-shadow: -2px -2px 0 rgba(251, 1, 252, .7), 2px 2px 0 rgba(4, 251, 246, 0.7)"
   );
 
-  const root = document.getElementById("one");
+  const root = document.getElementById("home");
   root.innerHTML = "";
 
-  results.forEach(results => {
+  return results.forEach(results => {
     // niet beter een array.map voor gebruiken?
     root.insertAdjacentHTML(
       "afterend",
@@ -455,3 +480,12 @@ function render(data) {
     );
   });
 }
+
+function updateUI(route) {
+    results.forEach(section => {
+      section.classList.remove("active");
+    });
+    activeSection = document.querySelector(`[data-route=${route}]`);
+    console.log(activeSection);
+    activeSection.classList.add("active");
+  }
