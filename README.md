@@ -35,8 +35,13 @@ https://wafs.netlify.com/
 - [ ] Add search (in-repo or global? idk yet)
 - [ ] Add error handling
 - [ ] Add function to captitalize usernames
+- [ ] Add detail page
+- [ ] Add stats page
+- [ ] Add interaction diagram
 - [ ] Styling
 - [ ] Add datavisualization
+- [ ] Finish readme
+- [ ] Prepare peer review
 
 ## Concept
 
