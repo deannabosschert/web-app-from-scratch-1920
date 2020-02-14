@@ -50,11 +50,13 @@ This app is for keeping track of the current progress of the Web App From Scratc
 
 ## Installation
 
-This repository doesn't have any dependencies.
+This repository doesn't have any dependencies.. yet.
 
+Clone this repository to your own device, then run `index.html`.
 ```bash
 $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 ```
+
 
 ```json
 {
@@ -105,8 +107,14 @@ How does flowed interaction through the application? (interaction diagram)
 ### Github API
 
 The API I've used is [Github's](https://api.github.com).
+
+#### Endpoint(s)
+The endpoint I'm using on the overview page is the following:
+`https://api.github.com/repos/cmda-minor-web/web-app-from-scratch-1920/forks?per_page=50`
+
+
 Which API is used and what are the limitations? (rate limit)
-[iets van uitleg over de api]
+
 
 #### Rate limiting
 
@@ -121,14 +129,28 @@ The returned HTTP headers of any API request show your current rate limit status
 ### Data cleaning
 
 wat is er gedaan met de opgehaalde data?
+*Filtering middels array.map*
 
 ```js
+function filterArray(array) {
+  return array.map(results => {
+    return {
+      name: results.owner.login,
+      description: results.description,
+      avatar: results.owner.avatar_url,
+      homepage: results.homepage,
+      id: results.id,
+      ding: results.ding,
+      id: results.id
+      }
+   }
+}
 ```
 
 ## Features (+ wishlist)
 
 What would you like to add (feature wishlist / backlog)
-features in de app
+features in de app, zie interaction diagram.
 
 ## Assignment
 
