@@ -233,7 +233,7 @@ Goal: Manipulate data. Split code into modules. Reflect on end result
 
 ### Rubric
 
-[Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true):
+[Rubric- detailed rating of my project](https://github.com/deannabosschert/web-app-from-scratch-1920/wiki/Rubric)
 ![rubric](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/rubric.png)
 
 ## ℹ️ Resources
