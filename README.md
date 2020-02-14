@@ -1,4 +1,4 @@
-## Web App From Scratch @cmda-minor-web 1819
+## Web App From Scratch @cmda-minor-web 1920
 
 # Class of 2020
 
@@ -29,7 +29,7 @@ https://wafs.netlify.com/
 
 ## To-do
 
-- [ ] Refactor code (all global now), but I'll save that for when I've fixed routing
+- [ ] Refactor code (all global now), but I'll save that for when I've fixed routing completely
 - [ ] Functional shizzle (refactor)
 - [ ] Add info about API (rate limit, etc)
 - [ ] Add search (in-repo or global? idk yet)
@@ -42,6 +42,13 @@ https://wafs.netlify.com/
 - [ ] Add datavisualization
 - [ ] Finish readme
 - [ ] Prepare peer review
+- [ ] English-Dutch variable names, comments etc --> all in English (of Dunglish lol)
+- [ ] Revert everything to arrowfunctions
+- [ ] Better function+variablenames
+- [ ] The huge ass injected html-list fixen
+- [ ] Fix comments in code
+- [ ] Templating engine adden
+- [ ] Apply nerd-score? gouden frame voor de grootste nerd
 
 ## Concept
 
@@ -50,11 +57,13 @@ This app is for keeping track of the current progress of the Web App From Scratc
 
 ## Installation
 
-This repository doesn't have any dependencies.
+This repository doesn't have any dependencies.. yet.
 
+Clone this repository to your own device, then run `index.html`.
 ```bash
 $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 ```
+
 
 ```json
 {
@@ -73,6 +82,12 @@ $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 
 Which actors are there in your application? (actor diagram)
 ![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/actordiagram.png)
+ 
+*To-do*
+- [ ] 'API DB" = GitHub API-source
+- [ ] LocalStorage; geef aan dat het erin wordt gepleurd
+- [ ] render.error bij routing?? lmao wat 👽
+- [ ] 
 
 ## Interaction diagram
 
@@ -105,8 +120,15 @@ How does flowed interaction through the application? (interaction diagram)
 ### Github API
 
 The API I've used is [Github's](https://api.github.com).
-Which API is used and what are the limitations? (rate limit)
-[iets van uitleg over de api]
+
+(wat is er interessant aan de data?)
+
+
+#### Endpoint(s)
+The endpoint I'm using on the overview page is the following:
+`https://api.github.com/repos/cmda-minor-web/web-app-from-scratch-1920/forks?per_page=50`
+
+
 
 #### Rate limiting
 
@@ -116,19 +138,56 @@ For unauthenticated requests, the rate limit allows for up to 60 requests per ho
 
 Note that the Search API has custom rate limit rules.
 
-The returned HTTP headers of any API request show your current rate limit status:
+The returned HTTP headers of any API request show your current rate limit status.
+
+If you aren't an authenticated user, your rate limit is 60 requests per hour.
+
+If you do exceed this limit, you'll see the following error message:
+``` js
+HTTP/1.1 403 Forbidden
+Date: Tue, 20 Aug 2013 14:50:41 GMT
+Status: 403 Forbidden
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1377013266
+{
+   "message": "API rate limit exceeded for xxx.xxx.xxx.xxx. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",
+   "documentation_url": "https://developer.github.com/v3/#rate-limiting"
+}
+```
 
 ### Data cleaning
 
-wat is er gedaan met de opgehaalde data?
+Wat is er gedaan met de opgehaalde data?
+*Filtering middels array.map*
 
 ```js
+function filterArray(array) {
+  return array.map(results => {
+    return {
+      name: results.owner.login,
+      description: results.description,
+      avatar: results.owner.avatar_url,
+      homepage: results.homepage,
+      id: results.id,
+      ding: results.ding,
+      id: results.id
+      }
+   }
+}
 ```
 
 ## Features (+ wishlist)
 
-What would you like to add (feature wishlist / backlog)
-features in de app
+What would you like to add (feature wishlist / backlog)?
+- [x] Overview van de huidige klas
+- [ ] Detailpagina per student
+
+- [ ] 'Stats'-pagina:
+- [ ] Leaderboard per ding (aantal commits, aantal fixed issues, aantal openstaande issues)
+- [ ] 'Wie heeft wat wel en wie wat niet' -> stats (branches, wiki, license)
+- [ ] Wie is waar in 't programma'? (check voor bestand met 'router', 'routie', etc)
+- [ ] Wie schrijft bepaalde dingen zelf? (idk if possible, nice to have)
 
 ## Assignment
 
@@ -159,6 +218,7 @@ Goal: Manipulate data. Split code into modules. Reflect on end result
 [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true)
 
 ## Resources
+https://developer.github.com/v3/
 
 ### Credits
 
