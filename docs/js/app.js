@@ -70,27 +70,18 @@ function filterArray(array) {
 
 
 // function routeDingen() {
-  var router = {
-    handle: function() {
-      routie({
-        // 'user/:id': id => {
-        //   console.log(id);
-        // },
-        home: () => {
-          console.log("home1")
-          updateUI('home');
-        },
-        stats: () => {
-          console.log("test1")
-          updateUI('stats');
-        },
-        progress: () => {
-          console.log("test2")
-          updateUI('progress');
-        }
-      });
-    }
-}
+
+routie({
+  home: () => {
+    updateUI('home');
+  },
+  stats: () => {
+    updateUI('stats');
+  },
+  progress: () => {
+    updateUI('progress');
+  }
+});
 // }
 
 
@@ -159,11 +150,14 @@ function render(data) {
   });
 }
 
+const sections = document.querySelectorAll('section');
+
+// update UI from route (hashchange)
 function updateUI(route) {
-    results.forEach(section => {
-      section.classList.remove("active");
-    });
-    activeSection = document.querySelector(`[data-route=${route}]`);
-    console.log(activeSection);
-    activeSection.classList.add("active");
-  }
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+  activeSection = document.querySelector(`[data-route=${route}]`);
+  console.log(activeSection);
+  activeSection.classList.add('active');
+}
