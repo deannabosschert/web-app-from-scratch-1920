@@ -105,12 +105,16 @@ Which actors are there in your application? (actor diagram)
 - [ ] 'API DB" = GitHub API-source
 - [ ] LocalStorage; geef aan dat het erin wordt gepleurd
 - [ ] render.error bij routing?? lmao wat 👽
-- [ ] 
+- [ ] Add overview, stats etc bij router
+- [ ] Nieuwe apicall bij detailpagina
+- 
 
 ## ↔️ Interaction diagram
 
 How does flowed interaction through the application? (interaction diagram)
 ![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/interactiondiagram.png)
+
+Welke volgorde heeft je code?
 
 - [x] Overview van de huidige klas
 - [ ] Detailpagina per student
