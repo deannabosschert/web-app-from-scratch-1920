@@ -1,8 +1,8 @@
 ---
 name: "Peer review \U0001F465"
-about: Describe this issue template's purpose here.
+about: Use this template to create issues during the peer reviews.
 title: "Peer review \U0001F465"
-labels: ''
+labels: 'peer-review'
 assignees: ''
 
 ---
