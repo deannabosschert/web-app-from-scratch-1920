@@ -1,4 +1,4 @@
-## Web App From Scratch @cmda-minor-web 1819
+## Web App From Scratch @cmda-minor-web 1920
 
 # Class of 2020
 
@@ -113,8 +113,6 @@ The endpoint I'm using on the overview page is the following:
 `https://api.github.com/repos/cmda-minor-web/web-app-from-scratch-1920/forks?per_page=50`
 
 
-Which API is used and what are the limitations? (rate limit)
-
 
 #### Rate limiting
 
@@ -124,11 +122,27 @@ For unauthenticated requests, the rate limit allows for up to 60 requests per ho
 
 Note that the Search API has custom rate limit rules.
 
-The returned HTTP headers of any API request show your current rate limit status:
+The returned HTTP headers of any API request show your current rate limit status.
+
+If you aren't an authenticated user, your rate limit is 60 requests per hour.
+
+If you do exceed this limit, you'll see the following error message:
+``` js
+HTTP/1.1 403 Forbidden
+Date: Tue, 20 Aug 2013 14:50:41 GMT
+Status: 403 Forbidden
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1377013266
+{
+   "message": "API rate limit exceeded for xxx.xxx.xxx.xxx. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",
+   "documentation_url": "https://developer.github.com/v3/#rate-limiting"
+}
+```
 
 ### Data cleaning
 
-wat is er gedaan met de opgehaalde data?
+Wat is er gedaan met de opgehaalde data?
 *Filtering middels array.map*
 
 ```js
@@ -149,8 +163,15 @@ function filterArray(array) {
 
 ## Features (+ wishlist)
 
-What would you like to add (feature wishlist / backlog)
-features in de app, zie interaction diagram.
+What would you like to add (feature wishlist / backlog)?
+- [x] Overview van de huidige klas
+- [ ] Detailpagina per student
+
+- [ ] 'Stats'-pagina:
+- [ ] Leaderboard per ding (aantal commits, aantal fixed issues, aantal openstaande issues)
+- [ ] 'Wie heeft wat wel en wie wat niet' -> stats (branches, wiki, license)
+- [ ] Wie is waar in 't programma'? (check voor bestand met 'router', 'routie', etc)
+- [ ] Wie schrijft bepaalde dingen zelf? (idk if possible, nice to have)
 
 ## Assignment
 
@@ -181,6 +202,7 @@ Goal: Manipulate data. Split code into modules. Reflect on end result
 [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true)
 
 ## Resources
+https://developer.github.com/v3/
 
 ### Credits
 
