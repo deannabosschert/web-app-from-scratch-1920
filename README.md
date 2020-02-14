@@ -48,6 +48,7 @@ https://wafs.netlify.com/
 - [ ] The huge ass injected html-list fixen
 - [ ] Fix comments in code
 - [ ] Templating engine adden
+- [ ] Apply nerd-score? gouden frame voor de grootste nerd
 
 ## Concept
 
