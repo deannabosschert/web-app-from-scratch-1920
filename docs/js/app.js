@@ -96,7 +96,7 @@ function render(data) {
     "text-transform: uppercase; background: #000; color: #FFF; font-size: 21pt; font-weight: bold; padding: 5px 20px; text-shadow: -2px -2px 0 rgba(251, 1, 252, .7), 2px 2px 0 rgba(4, 251, 246, 0.7)"
   );
 
-  const root = document.getElementById("home");
+  const root = document.getElementById("overview");
   root.innerHTML = "";
 
   return results.forEach(results => {

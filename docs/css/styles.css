@@ -36,14 +36,7 @@ main {
 }
 
 section {
-  padding: 1rem;
-  color: #000;
   opacity: 0;
-  transition: 0.25s;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
 }
 
 section[data-route="stats"] {
@@ -67,10 +60,9 @@ article {
   max-width: 25rem;
   opacity: 1;
   transition: 0.25s;
-  /* position: absolute; */
-  /* width: 100%; */
-  top: 0;
-  left: 0;
+  position: absolute;
+  width: 100%;
+
 }
 
 span {
@@ -104,6 +96,7 @@ ul {
   background-color: white;
   padding: 1rem;
   margin: 1rem;
+  z-index: 10;
   /* display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -134,6 +127,7 @@ ul img {
   background-color: white;
   padding: 1rem;
   margin: 1rem;
+  z-index: 10;
 }
 
 /* STATE */
