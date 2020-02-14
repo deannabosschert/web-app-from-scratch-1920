@@ -3,7 +3,7 @@
 # Class of 2020
 
 https://wafs.netlify.com/
-[screenshot]
+![screenshot of web app](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/screenshot_webApp.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/wafs/deploys)
 
@@ -215,7 +215,8 @@ Goal: Manipulate data. Split code into modules. Reflect on end result
 
 ### Rubric
 
-[Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true)
+[Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true):
+![rubric](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/rubric.png)
 
 ## Resources
 https://developer.github.com/v3/
