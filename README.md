@@ -12,16 +12,30 @@ https://wafs.netlify.com/
 
 <!-- toc -->
 
-- [Concept](#Concept)
-- [Installation](#Installation)
-- [Actor diagram](#Actordiagram)
-- [Interaction diagram](#Interactiondiagram)
-- [Design patterns](#interactiondiagram)
-- [Best practices](#bestpractices)
-- [Data](#data)
-- [Features](#features)
-- [Assignment](#assignment)
-- [Resources](#resources)
+- [✅ To-do](#--to-do)
+- [📋 Concept](#---concept)
+- [⚙️ Installation](#---installation)
+- [🧑🏼‍ Actor Diagram](#------actor-diagram)
+- [↔️ Interaction diagram](#---interaction-diagram)
+- [🌍 Design patterns](#---design-patterns)
+- [👍🏽 Best practices](#-----best-practices)
+- [🗃 Data](#---data)
+  * [🐒 Github API](#---github-api)
+    + [Endpoint(s)](#endpoint-s-)
+    + [Rate limiting](#rate-limiting)
+  * [💽 Data cleaning](#---data-cleaning)
+- [👯🏿‍ Features (+ wishlist)](#------features----wishlist-)
+- [🏫 Assignment](#---assignment)
+  * [Learning goals](#learning-goals)
+  * [Week 1 - Hello API 🐒](#week-1---hello-api---)
+  * [Week 2 - Design and Refactor 🛠](#week-2---design-and-refactor---)
+  * [Week 3 - Wrapping up 🎁](#week-3---wrapping-up---)
+  * [Rubric](#rubric)
+- [ℹ️ Resources](#---resources)
+  * [Credits](#credits)
+  * [Small inspiration sources](#small-inspiration-sources)
+- [🗺️ License](#----license)
+
 
 <!-- tocstop -->
 
