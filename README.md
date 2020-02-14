@@ -81,6 +81,12 @@ $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 
 Which actors are there in your application? (actor diagram)
 ![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/actordiagram.png)
+ 
+*To-do*
+- [ ] 'API DB" = GitHub API-source
+- [ ] LocalStorage; geef aan dat het erin wordt gepleurd
+- [ ] render.error bij routing?? lmao wat 👽
+- [ ] 
 
 ## Interaction diagram
 
