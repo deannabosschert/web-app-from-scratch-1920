@@ -27,7 +27,7 @@ https://wafs.netlify.com/
 
 </details>
 
-## To-do
+## ✅ To-do
 
 - [ ] Refactor code (all global now), but I'll save that for when I've fixed routing completely
 - [ ] Functional shizzle (refactor)
@@ -54,12 +54,12 @@ https://wafs.netlify.com/
 - [ ] Localstorage.getItem (ietsgetten) in een if-state
   `if (localStorage.getItem('stations')) {}`
 
-## Concept
+## 📋 Concept
 
 What does your app do, what is the goal? (passing butter)
 This app is for keeping track of the current progress of the Web App From Scratch class in the minor Webdevelopment (2020).
 
-## Installation
+## ⚙️ Installation
 
 This repository doesn't have any dependencies.. yet.
 
@@ -82,7 +82,7 @@ $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 }
 ```
 
-## Actor Diagram
+## 🧑🏼‍ Actor Diagram
 
 Which actors are there in your application? (actor diagram)
 ![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/actordiagram.png)
@@ -93,7 +93,7 @@ Which actors are there in your application? (actor diagram)
 - [ ] render.error bij routing?? lmao wat 👽
 - [ ] 
 
-## Interaction diagram
+## ↔️ Interaction diagram
 
 How does flowed interaction through the application? (interaction diagram)
 ![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/interactiondiagram.png)
@@ -107,21 +107,21 @@ How does flowed interaction through the application? (interaction diagram)
 - [ ] Wie is waar in 't programma'? (check voor bestand met 'router', 'routie', etc)
 - [ ] Wie schrijft bepaalde dingen zelf? (idk if possible, nice to have)
 
-## Design patterns
+## 🌍 Design patterns
 
 - opsomming
 - van
 - patterns
 
-## Best practices
+## 👍🏽 Best practices
 
 - opsomming
 - van
 - practices
 
-## Data
+## 🗃 Data
 
-### Github API
+### 🐒 Github API
 
 The API I've used is [Github's](https://api.github.com).
 
@@ -160,7 +160,7 @@ X-RateLimit-Reset: 1377013266
 }
 ```
 
-### Data cleaning
+### 💽 Data cleaning
 
 Wat is er gedaan met de opgehaalde data?
 *Filtering middels array.map*
@@ -181,7 +181,7 @@ function filterArray(array) {
 }
 ```
 
-## Features (+ wishlist)
+## 👯🏿‍ Features (+ wishlist)
 
 What would you like to add (feature wishlist / backlog)?
 - [x] Overview van de huidige klas
@@ -193,7 +193,7 @@ What would you like to add (feature wishlist / backlog)?
 - [ ] Wie is waar in 't programma'? (check voor bestand met 'router', 'routie', etc)
 - [ ] Wie schrijft bepaalde dingen zelf? (idk if possible, nice to have)
 
-## Assignment
+## 🏫 Assignment
 
 In this course I learned to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API of my choice, manipulated and finally shown in the UI of the App. I have learned different ways to structure code and developed my own coding style. With the gained knowledge I'm able to build interactive prototypes, based on real data. Also, I gained a better understanding of the how API's, frameworks and libraries work.
 
@@ -222,7 +222,7 @@ Goal: Manipulate data. Split code into modules. Reflect on end result
 [Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true):
 ![rubric](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/rubric.png)
 
-## Resources
+## ℹ️ Resources
 https://developer.github.com/v3/
 
 ### Credits
@@ -238,6 +238,6 @@ https://developer.github.com/v3/
 - [medium ofzo](https://github.com)
 - [dribbble?](https://github.com)
 
-## License
+## 🗺️ License
 
 MIT dingen
