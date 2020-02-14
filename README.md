@@ -50,6 +50,10 @@ https://wafs.netlify.com/
 - [ ] Templating engine adden
 - [ ] Apply nerd-score? gouden frame voor de grootste nerd
 
+
+- [ ] Localstorage.getItem (ietsgetten) in een if-state
+  `if (localStorage.getItem('stations')) {}`
+
 ## Concept
 
 What does your app do, what is the goal? (passing butter)
