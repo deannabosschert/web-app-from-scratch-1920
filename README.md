@@ -29,7 +29,7 @@ https://wafs.netlify.com/
 
 ## To-do
 
-- [ ] Refactor code (all global now), but I'll save that for when I've fixed routing
+- [ ] Refactor code (all global now), but I'll save that for when I've fixed routing completely
 - [ ] Functional shizzle (refactor)
 - [ ] Add info about API (rate limit, etc)
 - [ ] Add search (in-repo or global? idk yet)
@@ -42,6 +42,12 @@ https://wafs.netlify.com/
 - [ ] Add datavisualization
 - [ ] Finish readme
 - [ ] Prepare peer review
+- [ ] English-Dutch variable names, comments etc --> all in English (of Dunglish lol)
+- [ ] Revert everything to arrowfunctions
+- [ ] Better function+variablenames
+- [ ] The huge ass injected html-list fixen
+- [ ] Fix comments in code
+- [ ] Templating engine adden
 
 ## Concept
 
@@ -107,6 +113,9 @@ How does flowed interaction through the application? (interaction diagram)
 ### Github API
 
 The API I've used is [Github's](https://api.github.com).
+
+(wat is er interessant aan de data?)
+
 
 #### Endpoint(s)
 The endpoint I'm using on the overview page is the following:
