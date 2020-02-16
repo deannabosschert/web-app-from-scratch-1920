@@ -72,6 +72,10 @@ function filterArray(array) {
 // function routeDingen() {
 
 routie({
+
+  // "":() => {
+  //   updateUI('home'); // app.init()
+  //  },
   home: () => {
     updateUI('home');
   },
