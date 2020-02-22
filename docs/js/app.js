@@ -1,4 +1,9 @@
-// function loadData() {
+import { Fetcher } from "./fetcher.js";
+
+loadData()
+function loadData() {
+//   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
+
 const endpoint = "https://api.github.com";
 const minor = "/cmda-minor-web";
 const course = "/web-app-from-scratch-";
@@ -7,22 +12,19 @@ const tag = "/forks";
 const limit = "50";
 const apiLink = `${endpoint}/repos${minor}${course}${year}${tag}?per_page=${limit}`;
 
-fetch(apiLink)
-  // .then(res => res.json()) // correcte errhandling nog adden, zie linkje van Joost/Laurens in slack
-  // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
-  .then(function(res) {
-    return res.json();
+Fetcher.get(apiLink)
+  .then(res => {
+    const data = filterArray(res);
+       // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
+       // zet de data in een string en yeet 'm vervolgens in localStorage onder "repos"
+       // return localStorage.setItem("repos", JSON.stringify(data));
+       render(data);
   })
-  .then(json => {
-    const data = filterArray(json);
-    // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
-    // pleur de data in een string en yeet 'm vervolgens in localStorage onder "repos"
-    // return localStorage.setItem("repos", JSON.stringify(data));
-    render(data.data);
-})
   .catch(err => {
-  console.log(err);
-});
+    console.log(err);
+  });
+
+}
 
 
 function filterArray(array) {
@@ -68,24 +70,24 @@ function filterArray(array) {
 //   router.handle();
 // }
 
-
+//
 // function routeDingen() {
-
-routie({
-
-  // "":() => {
-  //   updateUI('home'); // app.init()
-  //  },
-  home: () => {
-    updateUI('home');
-  },
-  stats: () => {
-    updateUI('stats');
-  },
-  progress: () => {
-    updateUI('progress');
-  }
-});
+//
+// routie({
+//
+//   // "":() => {
+//   //   updateUI('home'); // app.init()
+//   //  },
+//   home: () => {
+//     updateUI('home');
+//   },
+//   stats: () => {
+//     updateUI('stats');
+//   },
+//   progress: () => {
+//     updateUI('progress');
+//   }
+// });
 // }
 
 
@@ -94,13 +96,19 @@ routie({
 
 function render(data) {
   // haal "repos" op uit localStorage en parse ze in JSON zodat 't weer bruikbaar is (getest met wifi uitgezet)
-  const results = JSON.parse(localStorage.getItem("repos"));
+  // const results = JSON.parse(localStorage.getItem("repos"));
+  const results = data
   console.log(
     "%c Test!",
     "text-transform: uppercase; background: #000; color: #FFF; font-size: 21pt; font-weight: bold; padding: 5px 20px; text-shadow: -2px -2px 0 rgba(251, 1, 252, .7), 2px 2px 0 rgba(4, 251, 246, 0.7)"
-  );
+  )
+
+    console.log(results)
+
 
   const root = document.getElementById("overview");
+  console.log(root)
+
   root.innerHTML = "";
 
   return results.forEach(results => {
@@ -153,15 +161,14 @@ function render(data) {
     );
   });
 }
-
-const sections = document.querySelectorAll('section');
-
-// update UI from route (hashchange)
-function updateUI(route) {
-  sections.forEach(section => {
-    section.classList.remove('active');
-  });
-  activeSection = document.querySelector(`[data-route=${route}]`);
-  console.log(activeSection);
-  activeSection.classList.add('active');
-}
+//
+// // update UI from route (hashchange)
+// function updateUI(route) {
+//   const sections = document.querySelectorAll('section');
+//   sections.forEach(section => {
+//     section.classList.remove('active');
+//   });
+//   activeSection = document.querySelector(`[data-route=${route}]`);
+//   console.log(activeSection);
+//   activeSection.classList.add('active');
+// }
