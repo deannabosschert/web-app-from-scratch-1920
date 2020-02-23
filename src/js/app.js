@@ -1,6 +1,6 @@
 import {
   loadNerds
-} from "./modules/api.js"
+} from "./modules/API.js"
 import {
   renderNerds
 } from "./modules/render.js"
