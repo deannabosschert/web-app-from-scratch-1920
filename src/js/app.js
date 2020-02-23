@@ -2,15 +2,15 @@ import { Fetcher } from "./fetcher.js";
 
 (function checkLocalStorage() {
   const storage = window.localStorage;
-    if (storage.getItem("githubRepos") === null) {
-      console.log("geen data in je localStorage")
-      loadData()
-    } else {
-      console.log("wel data in je localStorage")
-      const data = JSON.parse(storage.getItem("githubRepos"));
-      render(data)
-    }
-})()
+  if (storage.getItem("githubRepos") === null) {
+    console.log("geen data in je localStorage");
+    loadData();
+  } else {
+    console.log("wel data in je localStorage");
+    const data = JSON.parse(storage.getItem("githubRepos"));
+    render(data);
+  }
+})();
 
 function loadData() {
   //   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
@@ -25,7 +25,7 @@ function loadData() {
   Fetcher.get(apiLink)
     .then(res => {
       const data = filterArray(res);
-      storeData(data)
+      storeData(data);
       render(data);
     })
     .catch(err => {
@@ -33,12 +33,12 @@ function loadData() {
     });
 }
 
-function storeData(data){
+function storeData(data) {
   // console.log(data)
   // const ava = data.avatar
   // console.log(ava)
-// ergens hier de images van de avatar, apart storen? --> later naar kijken, nog niet specifiek relevant.
-// https://hacks.mozilla.org/2012/02/saving-images-and-files-in-localstorage/
+  // ergens hier de images van de avatar, apart storen? --> later naar kijken, nog niet specifiek relevant.
+  // https://hacks.mozilla.org/2012/02/saving-images-and-files-in-localstorage/
   return localStorage.setItem("githubRepos", JSON.stringify(data));
 }
 
@@ -90,16 +90,9 @@ function render(data) {
     "%c Test!",
     "text-transform: uppercase; background: #000; color: #FFF; font-size: 21pt; font-weight: bold; padding: 5px 20px; text-shadow: -2px -2px 0 rgba(251, 1, 252, .7), 2px 2px 0 rgba(4, 251, 246, 0.7)"
   );
-
-  console.log(data);
-
   const root = document.getElementById("overview");
-  console.log(root);
-
   root.innerHTML = "";
-
-  return data.forEach(data => {
-    // niet beter een array.map voor gebruiken?
+  return data.map(data => {
     root.insertAdjacentHTML(
       "afterend",
       "<article>" +
