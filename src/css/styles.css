@@ -23,16 +23,32 @@ body {
 header {
   display: flex;
   justify-content: center;
+  color: white;
+  font-weight: bold;
+  background-color: #4b0082;
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 2rem;
 }
 
 section {
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* section[data-route="stats"] {
+  background-color: #ffd3d9;
+}
+
+section[data-route="progress"] {
+  background-color: #ccccff;
+} */
+
+section.active {
+  opacity: 1;
 }
 
 article {
@@ -41,7 +57,9 @@ article {
   background-color: #f8f8f8;
   border-radius: 25px;
   box-shadow: 10px 10px 6px -8px rgba(255, 255, 255, 1);
-  max-width: 25rem;
+  opacity: 1;
+  /* position: absolute; */
+  max-width: 20%;
 }
 
 span {
@@ -55,10 +73,14 @@ h1 {
   color: white;
 }
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  color: white;
+  display: block;
 }
 
 h3 {
+  font-size: 1.4rem;
+  font-variant: small-caps;
 }
 
 p {
@@ -69,6 +91,10 @@ img {
 }
 
 ul {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  z-index: 10;
   /* display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -88,14 +114,14 @@ ul img {
 }
 
 /* LAYOUT */
-.background {
-  background-color: black;
-  height: 100%;
-  width: 100%;
-}
+
 
 /* MODULES */
-.class {
+.backToTop {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  z-index: 10;
 }
 
 /* STATE */
