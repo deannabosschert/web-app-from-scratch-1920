@@ -3,7 +3,7 @@
 # Class of 2020
 
 https://wafs.netlify.com/
-![screenshot of web app](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/screenshot_webApp.png)
+![screenshot of web app](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/screenshot_webApp.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/wafs/deploys)
 
@@ -99,20 +99,20 @@ $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 ## 🧑🏼‍ Actor Diagram
 
 Which actors are there in your application? (actor diagram)
-![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/actordiagram.png)
- 
+![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/actordiagram.png)
+
 *To-do*
 - [ ] 'API DB" = GitHub API-source
 - [ ] LocalStorage; geef aan dat het erin wordt gepleurd
 - [ ] render.error bij routing?? lmao wat 👽
 - [ ] Add overview, stats etc bij router
 - [ ] Nieuwe apicall bij detailpagina
-- 
+-
 
 ## ↔️ Interaction diagram
 
 How does flowed interaction through the application? (interaction diagram)
-![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/interactiondiagram.png)
+![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/interactiondiagram.png)
 
 Welke volgorde heeft je code?
 
@@ -238,7 +238,7 @@ Goal: Manipulate data. Split code into modules. Reflect on end result
 ### Rubric
 
 [Rubric- detailed rating of my project](https://github.com/deannabosschert/web-app-from-scratch-1920/wiki/Rubric)
-![rubric](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/docs/img/rubric.png)
+![rubric](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/rubric.png)
 
 ## ℹ️ Resources
 https://developer.github.com/v3/
