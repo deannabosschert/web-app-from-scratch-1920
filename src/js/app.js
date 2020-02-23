@@ -6,15 +6,15 @@ import {
   const storage = window.localStorage
   if (storage.getItem("githubRepos") === null) {
     console.log("geen data in je localStorage")
-    loadData()
+    loadNerds()
   } else {
-    console.log("wel data in je localStorage")
-    const data = JSON.parse(storage.getItem("githubRepos"))
-    render(data)
+    console.log("wel data in je localStorage 🤓")
+    const nerds = JSON.parse(storage.getItem("githubRepos"))
+    renderNerds(nerds)
   }
 })()
 
-function loadData() {
+function loadNerds() {
   //   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
   const endpoint = "https://api.github.com"
   const minor = "/cmda-minor-web"
@@ -26,22 +26,22 @@ function loadData() {
 
   Fetcher.get(apiLink)
     .then(res => {
-      const data = filterArray(res)
-      storeData(data)
-      render(data)
+      const nerds = filterArray(res)
+      storeNerds(nerds)
+      renderNerds(nerds)
     })
     .catch(err => {
       console.log(err)
     })
 }
 
-function storeData(data) {
-  // console.log(data)
-  // const ava = data.avatar
+function storeNerds(nerds) {
+  // console.log(nerds)
+  // const ava = nerds.avatar
   // console.log(ava)
   // ergens hier de images van de avatar, apart storen? --> later naar kijken, nog niet specifiek relevant.
   // https://hacks.mozilla.org/2012/02/saving-images-and-files-in-localstorage/
-  return localStorage.setItem("githubRepos", JSON.stringify(data))
+  return localStorage.setItem("githubRepos", JSON.stringify(nerds))
 }
 
 // function routeDingen() {
@@ -87,57 +87,57 @@ function storeData(data) {
 
 // router.handle()
 
-function render(data) {
+function renderNerds(nerds) {
   console.log(
     "%c Test!",
     "text-transform: uppercase; background: #000; color: #FFF; font-size: 21pt; font-weight: bold; padding: 5px 20px; text-shadow: -2px -2px 0 rgba(251, 1, 252, .7), 2px 2px 0 rgba(4, 251, 246, 0.7)"
   )
   const root = document.getElementById("overview")
   root.innerHTML = ""
-  return data.map(data => {
+  return nerds.map(nerd => {
     root.insertAdjacentHTML(
       "afterend",
       "<article>" +
       "<h3>" +
-      data.name +
+      nerd.name +
       "</h3><a href=" +
-      data.homepage +
+      nerd.homepage +
       "><p>" +
-      data.description +
+      nerd.description +
       '</p></a><img src="' +
-      data.avatar +
+      nerd.avatar +
       '">' +
       "<p>" +
       "id: " +
-      data.id +
+      nerd.id +
       "</p>" +
       "<p>" +
       "node_id: " +
-      data.node_id +
+      nerd.node_id +
       "</p>" +
       "<p>" +
       "name: " +
-      data.name +
+      nerd.name +
       "</p>" +
       "<p>" +
       "full_name: " +
-      data.full_name +
+      nerd.full_name +
       "</p>" +
       "<p>" +
       "private: " +
-      data.private +
+      nerd.private +
       "</p>" +
       "<p>" +
       "owner: " +
-      data.owner +
+      nerd.owner +
       "</p>" +
       "<p>" +
       "html_url: " +
-      data.html_url +
+      nerd.html_url +
       "</p>" +
       "<p>" +
       "description: " +
-      data.description +
+      nerd.description +
       "</p>" +
       "</article>"
     )
