@@ -10,10 +10,12 @@ const checkStatus = response => {
 
 const parseJSON = res => res.json();
 
-const Fetcher = {
+const fetcher = {
   get: (path, params) =>
     fetch(path, params)
-      .then(checkStatus)
-      .then(parseJSON)
+    .then(checkStatus)
+    .then(parseJSON)
 };
-export { Fetcher };
+export {
+  fetcher
+};
