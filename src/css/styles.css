@@ -29,23 +29,23 @@ header {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 2rem;
 }
 
 section {
-  opacity: 0;
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-section[data-route="stats"] {
+/* section[data-route="stats"] {
   background-color: #ffd3d9;
 }
 
 section[data-route="progress"] {
   background-color: #ccccff;
-}
+} */
 
 section.active {
   opacity: 1;
@@ -57,11 +57,9 @@ article {
   background-color: #f8f8f8;
   border-radius: 25px;
   box-shadow: 10px 10px 6px -8px rgba(255, 255, 255, 1);
-  max-width: 25rem;
   opacity: 1;
-  position: absolute;
-  width: 100%;
-
+  /* position: absolute; */
+  max-width: 20%;
 }
 
 span {
@@ -77,6 +75,7 @@ h1 {
 h2 {
   font-size: 1.8rem;
   color: white;
+  display: block;
 }
 
 h3 {
@@ -115,11 +114,7 @@ ul img {
 }
 
 /* LAYOUT */
-.background {
-  background-color: black;
-  height: 100%;
-  width: 100%;
-}
+
 
 /* MODULES */
 .backToTop {
