@@ -1,6 +1,13 @@
 import {
-  Fetcher
-} from "../fetcher.js"
+  fetcher
+} from "./fetcher.js"
+import {
+  storeNerds
+} from "./store.js"
+import {
+  renderNerds
+} from "./render.js"
+
 
 export function loadNerds() {
   //   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
@@ -12,10 +19,11 @@ export function loadNerds() {
   const limit = "50"
   const apiLink = `${endpoint}/repos${minor}${course}${year}${tag}?per_page=${limit}`
 
-  Fetcher.get(apiLink)
+  fetcher.get(apiLink)
     .then(res => {
       const nerds = filterArray(res)
-      return nerds
+      storeNerds(nerds)
+      renderNerds(nerds)
     })
     .catch(err => {
       console.log(err)
