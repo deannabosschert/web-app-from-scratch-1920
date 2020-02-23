@@ -9,15 +9,7 @@ import { Fetcher } from "./fetcher.js";
       console.log("wel shit in je localStorage")
       const res = JSON.parse(storage.getItem("githubRepos"));
       render(res)
-      // return storage.getItem("githubRepos");
     }
-
-
-  // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
-  // zet de data in een string en yeet 'm vervolgens in localStorage onder "githubRepos"
-
-  // haal "githubRepos" op uit localStorage en parse ze in JSON zodat 't weer bruikbaar is (getest met wifi uitgezet)
-  // const results = JSON.parse(localStorage.getItem("githubRepos"));
 })()
 
 function loadData() {
