@@ -23,9 +23,6 @@ function loadData() {
   const apiLink = `${endpoint}/repos${minor}${course}${year}${tag}?per_page=${limit}`;
 
   Fetcher.get(apiLink)
-    // .then(res => {
-    //   localStorage.setItem("githubRepos", JSON.stringify(res));
-    // })
     .then(res => {
       const data = filterArray(res);
       storeData(data)
@@ -38,6 +35,10 @@ function loadData() {
 
 
 function storeData(data){
+  // console.log(data)
+  // const ava = data.avatar
+  // console.log(ava)
+// ergens hier de images van de avatar, apart storen? --> later naar kijken, nog niet specifiek relevant.
   return localStorage.setItem("githubRepos", JSON.stringify(data));
 }
 
@@ -85,65 +86,63 @@ function storeData(data){
 // router.handle()
 
 function render(data) {
-
-  const results = data;
   console.log(
     "%c Test!",
     "text-transform: uppercase; background: #000; color: #FFF; font-size: 21pt; font-weight: bold; padding: 5px 20px; text-shadow: -2px -2px 0 rgba(251, 1, 252, .7), 2px 2px 0 rgba(4, 251, 246, 0.7)"
   );
 
-  console.log(results);
+  console.log(data);
 
   const root = document.getElementById("overview");
   console.log(root);
 
   root.innerHTML = "";
 
-  return results.forEach(results => {
+  return data.forEach(data => {
     // niet beter een array.map voor gebruiken?
     root.insertAdjacentHTML(
       "afterend",
       "<article>" +
         "<h3>" +
-        results.name +
+        data.name +
         "</h3><a href=" +
-        results.homepage +
+        data.homepage +
         "><p>" +
-        results.description +
+        data.description +
         '</p></a><img src="' +
-        results.avatar +
+        data.avatar +
         '">' +
         "<p>" +
         "id: " +
-        results.id +
+        data.id +
         "</p>" +
         "<p>" +
         "node_id: " +
-        results.node_id +
+        data.node_id +
         "</p>" +
         "<p>" +
         "name: " +
-        results.name +
+        data.name +
         "</p>" +
         "<p>" +
         "full_name: " +
-        results.full_name +
+        data.full_name +
         "</p>" +
         "<p>" +
         "private: " +
-        results.private +
+        data.private +
         "</p>" +
         "<p>" +
         "owner: " +
-        results.owner +
+        data.owner +
         "</p>" +
         "<p>" +
         "html_url: " +
-        results.html_url +
+        data.html_url +
         "</p>" +
         "<p>" +
         "description: " +
-        results.description +
+        data.description +
         "</p>" +
         "</article>"
     );
@@ -151,22 +150,22 @@ function render(data) {
 }
 
 function filterArray(array) {
-  return array.map(results => {
+  return array.map(data => {
     return {
-      name: results.owner.login,
-      description: results.description,
-      avatar: results.owner.avatar_url,
-      homepage: results.homepage,
-      id: results.id,
-      ding: results.ding,
-      id: results.id,
-      node_id: results.node_id,
-      name: results.name,
-      full_name: results.full_name,
-      private: results.private,
-      owner: results.owner,
-      html_url: results.html_url,
-      description: results.description
+      name: data.owner.login,
+      description: data.description,
+      avatar: data.owner.avatar_url,
+      homepage: data.homepage,
+      id: data.id,
+      ding: data.ding,
+      id: data.id,
+      node_id: data.node_id,
+      name: data.name,
+      full_name: data.full_name,
+      private: data.private,
+      owner: data.owner,
+      html_url: data.html_url,
+      description: data.description
     };
   });
 }
