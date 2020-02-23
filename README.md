@@ -43,11 +43,11 @@ https://wafs.netlify.com/
 
 ## ✅ To-do
 
-- [ ] Refactor code (all global now), but I'll save that for when I've fixed routing completely
+- [x] Refactor code (all global now), but I'll save that for when I've fixed routing completely
 - [ ] Functional shizzle (refactor)
 - [ ] Add info about API (rate limit, etc)
 - [ ] Add search (in-repo or global? idk yet)
-- [ ] Add error handling
+- [x] Add error handling
 - [ ] Add function to captitalize usernames
 - [ ] Add detail page
 - [ ] Add stats page
