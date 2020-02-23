@@ -3,12 +3,12 @@ import { Fetcher } from "./fetcher.js";
 (function checkLocalStorage() {
   const storage = window.localStorage;
     if (storage.getItem("githubRepos") === null) {
-      console.log("geen shit in je localStorage")
+      console.log("geen data in je localStorage")
       loadData()
     } else {
-      console.log("wel shit in je localStorage")
-      const res = JSON.parse(storage.getItem("githubRepos"));
-      render(res)
+      console.log("wel data in je localStorage")
+      const data = JSON.parse(storage.getItem("githubRepos"));
+      render(data)
     }
 })()
 
@@ -27,13 +27,19 @@ function loadData() {
     //   localStorage.setItem("githubRepos", JSON.stringify(res));
     // })
     .then(res => {
-      render(res);
+      const data = filterArray(res);
+      storeData(data)
+      render(data);
     })
     .catch(err => {
       console.log(err);
     });
 }
 
+
+function storeData(data){
+  return localStorage.setItem("githubRepos", JSON.stringify(data));
+}
 
 // function routeDingen() {
 //   import Router from "./routie.js";
@@ -78,8 +84,7 @@ function loadData() {
 
 // router.handle()
 
-function render(res) {
-  const data = filterArray(res);
+function render(data) {
 
   const results = data;
   console.log(
