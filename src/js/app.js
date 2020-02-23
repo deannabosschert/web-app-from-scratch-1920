@@ -1,7 +1,7 @@
 import { Fetcher } from "./fetcher.js";
 
-loadData()
-function loadData() {
+
+(function loadData() {
 //   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
 
 const endpoint = "https://api.github.com";
@@ -24,7 +24,7 @@ Fetcher.get(apiLink)
     console.log(err);
   });
 
-}
+})()
 
 
 function filterArray(array) {
