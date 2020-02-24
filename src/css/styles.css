@@ -1,16 +1,19 @@
 /* BASE */
 :root {
   --dark: #000;
-  --course: #00b0fc; /*  #fb005a */
+  --course: #00b0fc;
+  /*  #fb005a */
   --light: #fff;
 }
 
 * {
   box-sizing: border-box;
 }
+
 a {
   /* font-size: 3rem; */
 }
+
 html {
   margin: 0;
   padding: 0;
@@ -20,6 +23,7 @@ html {
 body {
   background-color: var(--dark);
 }
+
 header {
   display: flex;
   justify-content: center;
@@ -49,7 +53,6 @@ section {
 section[data-route="progress"] {
   background-color: #ccccff;
 } */
-
 section.active {
   opacity: 1;
 }
@@ -65,16 +68,15 @@ article {
   max-width: 20%;
 }
 
-span {
-}
+span {}
 
-blockquote {
-}
+blockquote {}
 
 h1 {
   font-size: 3rem;
   color: white;
 }
+
 h2 {
   font-size: 2.5rem;
   color: white;
@@ -85,8 +87,7 @@ h3 {
   font-variant: small-caps;
 }
 
-p {
-}
+p {}
 
 img {
   max-width: 100%;
@@ -105,12 +106,14 @@ ul {
   padding: 0;
   margin: 0 -1rem; */
 }
+
 ul li {
   /* display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem; */
 }
+
 ul img {
   /* border: 2px solid var(--light);
   margin-top: 2em;
@@ -118,8 +121,6 @@ ul img {
 }
 
 /* LAYOUT */
-
-
 /* MODULES */
 .backToTop {
   background-color: white;
@@ -129,21 +130,38 @@ ul img {
 }
 
 /* STATE */
-article:hover {
+/* src https://codepen.io/EastingAndNorthing/pen/aNWrZz */
+.loader {
+  pointer-events: none;
+  width: 4em;
+  height: 4em;
+  border: 0.6em solid transparent;
+  border-color: rgb(216, 191, 216);
+  border-top-color: rgb(238, 130, 238);
+  border-radius: 50%;
+  animation: loadingspin 1s linear infinite;
+  z-index: -5;
 }
+
+@keyframes loadingspin {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+article:hover {}
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 /* THEME */
-.class {
-}
+.class {}
 
-input[type="checkbox"] {
-}
+input[type="checkbox"] {}
