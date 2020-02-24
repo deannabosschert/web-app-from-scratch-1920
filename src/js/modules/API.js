@@ -8,7 +8,6 @@ import {
   renderNerds
 } from "./render.js"
 
-
 export function loadNerds() {
   //   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
   const endpoint = "https://api.github.com"
@@ -19,15 +18,18 @@ export function loadNerds() {
   const limit = "50"
   const apiLink = `${endpoint}/repos${minor}${course}${year}${tag}?per_page=${limit}`
 
-  fetcher.get(apiLink)
-    .then(res => {
-      const nerds = filterArray(res)
-      storeNerds(nerds)
-      renderNerds(nerds)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+  return new Promise((resolve, reject) => {
+    fetcher.get(apiLink)
+      .then(res => {
+        const nerds = filterArray(res)
+        storeNerds(nerds)
+        renderNerds(nerds)
+        resolve(nerds)
+      })
+      .catch(err => {
+        reject(console.log(err))
+      })
+  })
 }
 
 

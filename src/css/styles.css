@@ -42,8 +42,8 @@ main {
 
 section {
   opacity: 1;
-  display: flex;
-  flex-wrap: wrap;
+  margin: 5%;
+  align-self: center;
 }
 
 /* section[data-route="stats"] {
@@ -131,7 +131,7 @@ ul img {
 
 /* STATE */
 /* src https://codepen.io/EastingAndNorthing/pen/aNWrZz */
-.loader {
+.loading {
   pointer-events: none;
   width: 4em;
   height: 4em;
@@ -140,7 +140,6 @@ ul img {
   border-top-color: rgb(238, 130, 238);
   border-radius: 50%;
   animation: loadingspin 1s linear infinite;
-  z-index: -5;
 }
 
 @keyframes loadingspin {
