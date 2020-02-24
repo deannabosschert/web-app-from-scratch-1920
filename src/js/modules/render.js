@@ -12,16 +12,15 @@ export function renderNerds(nerds) {
   const nerdList = nerds.map(nerd => ({
     projectName: nerd.name,
     description: nerd.description,
+    avatar: nerd.avatar,
+    html_url: nerd.html_url,
     homepage: nerd.homepage,
     id: nerd.id,
     node_id: nerd.node_id,
     name: nerd.name,
     full_name: nerd.full_name,
     private: nerd.private,
-    owner: nerd.owner,
-    html_url: nerd.html_url,
-    avatar: nerd.avatar
-
+    owner: nerd.owner
   }))
 
   const directives = {
@@ -29,7 +28,13 @@ export function renderNerds(nerds) {
       src: function() {
         return this.avatar
       }
+    },
+    html_url: {
+      href: function() {
+        return this.html_url;
+      }
     }
+
   };
 
   Transparency.render(root, nerdList, directives)
