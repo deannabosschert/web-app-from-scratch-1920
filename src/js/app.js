@@ -20,6 +20,7 @@ import {
       loadingState('active')
       const nerds = JSON.parse(storage.getItem("githubRepos"))
       renderNerds(nerds)
+
     }
   })()
 })()
