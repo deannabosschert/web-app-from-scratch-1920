@@ -39,15 +39,12 @@ function filterArray(array) {
       avatar: data.owner.avatar_url,
       homepage: data.homepage,
       id: data.id,
-      ding: data.ding,
-      id: data.id,
       node_id: data.node_id,
       name: data.name,
       full_name: data.full_name,
       private: data.private,
       owner: data.owner,
-      html_url: data.html_url,
-      description: data.description
+      html_url: data.html_url
     }
   })
 }
