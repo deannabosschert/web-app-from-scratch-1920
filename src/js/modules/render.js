@@ -12,7 +12,6 @@ export function renderNerds(nerds) {
     projectName: nerd.name,
     description: nerd.description,
     homepage: nerd.homepage,
-    // avatar: nerd.avatar,
     id: nerd.id,
     node_id: nerd.node_id,
     name: nerd.name,
@@ -22,7 +21,16 @@ export function renderNerds(nerds) {
     html_url: nerd.html_url
   }))
 
-  Transparency.render(root, nerdList)
+  const directives = {
+    avatar: {
+      src: function() {
+        return "https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/dog.jpg"
+      }
+    }
+  };
+
+  Transparency.render(root, nerdList, directives)
+
 }
 
 
