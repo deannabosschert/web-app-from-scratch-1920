@@ -5,6 +5,10 @@ export function renderNerds(nerds) {
   )
   const root = document.getElementById("overview")
   root.innerHTML = ""
+  // 
+  // Transparency.render(root, data)
+  // template staat al aangegeven in html(skeletonUI)
+
   return nerds.map(nerd => {
     root.insertAdjacentHTML(
       "afterend",
