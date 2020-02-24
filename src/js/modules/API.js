@@ -38,7 +38,7 @@ function filterArray(array) {
     return {
       name: data.owner.login,
       description: data.description,
-      // avatar: data.owner.avatar_url,
+      avatar: data.owner.avatar_url,
       homepage: data.homepage,
       id: data.id,
       node_id: data.node_id,
