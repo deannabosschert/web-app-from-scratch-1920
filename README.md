@@ -253,8 +253,7 @@ https://developer.github.com/v3/
 
 ### Small inspiration sources
 
-- [medium ofzo](https://github.com)
-- [dribbble?](https://github.com)
+- [Responsive square](https://spin.atomicobject.com/2015/07/14/css-responsive-square/) for avatar skeleton
 
 ## 🗺️ License
 
