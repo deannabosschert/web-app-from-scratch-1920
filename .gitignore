@@ -2,3 +2,4 @@ node_modules
 .github
 .DS_Store
 old_stuff
+test_skeleton
