@@ -1,11 +1,4 @@
 /* BASE */
-:root {
-  --dark: #000;
-  --course: #00b0fc;
-  /*  #fb005a */
-  --light: #fff;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -21,7 +14,7 @@ html {
 }
 
 body {
-  background-color: var(--dark);
+  background-color: #000;
 }
 
 header {
@@ -58,9 +51,6 @@ section[data-route="progress"] {
 /* section.active {
   opacity: 1;
 } */
-span {}
-
-blockquote {}
 
 h1 {
   font-size: 3rem;
@@ -97,8 +87,6 @@ ul li {
   margin-left: 1rem;
 }
 
-ul img {}
-
 /* LAYOUT */
 #overview {
   display: flex;
@@ -107,15 +95,6 @@ ul img {}
   justify-content: center;
 }
 
-/* skeleton */
-/* #overview .student {
-  content: ""
-  background-color: yellow;
-
-  &::after {
-
-  }
-} */
 /* MODULES */
 .backToTop {
   background-color: white;
@@ -131,19 +110,41 @@ ul img {}
   border-radius: 25px;
   box-shadow: 10px 10px 6px -8px rgba(255, 255, 255, 1);
   opacity: 1;
-  /* position: absolute; */
   min-width: 20%;
   width: 26vw;
   text-align: left;
 }
 
-/* .avatar {
+
+img.avatar {
   clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   border: 3px solid grey;
-  max-width: 100%;
-} */
+  background-color: rgb(216, 191, 216, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
 /* STATE */
-/* src https://codepen.io/EastingAndNorthing/pen/aNWrZz */
+.loading {
+  pointer-events: none;
+  width: 4rem;
+  height: 4rem;
+  border: 0.6em solid transparent;
+  border-color: rgb(216, 191, 216);
+  border-top-color: rgb(238, 130, 238);
+  border-radius: 50%;
+  animation: loadingspin 1s linear infinite;
+}
+
+@keyframes loadingspin {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+/* skeleton */
 h3:empty {
   width: 80%;
   height: 1.4rem;
@@ -168,45 +169,4 @@ h3:empty {
   padding-bottom: 100%;
 }
 
-img.avatar {
-  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-  border: 3px solid grey;
-  background-color: rgb(216, 191, 216, 0.7);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.loading {
-  pointer-events: none;
-  width: 4em;
-  height: 4em;
-  border: 0.6em solid transparent;
-  border-color: rgb(216, 191, 216);
-  border-top-color: rgb(238, 130, 238);
-  border-radius: 50%;
-  animation: loadingspin 1s linear infinite;
-}
-
-@keyframes loadingspin {
-  100% {
-    transform: rotate(360deg)
-  }
-}
-
-article:hover {}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* THEME */
-.class {}
-
-input[type="checkbox"] {}
