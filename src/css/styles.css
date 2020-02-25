@@ -82,27 +82,6 @@ p {
   max-width: 100%;
 }
 
-img.avatar:blank{
-  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-  border: 3px solid grey;
-  background-color: rgb(216,191,216, 0.7);
-  width: 100%;
-  padding-bottom: 100%;
-  background-position:center center;
-  background-repeat:no-repeat;
-  background-size:cover;
-
-}
-
-.avatar {
-  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-  border: 3px solid grey;
-  background-color: none;
-  max-width: 100%;
-}
-
-
-
 ul {
   background-color: white;
   padding: 2rem;
@@ -111,25 +90,13 @@ ul {
   max-width: 10%;
   justify-content: center;
   align-content: center;
-  /* display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-  margin: 0 -1rem; */
 }
 
 ul li {
   margin-left: 1rem;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem; */
 }
 
 ul img {
-  /* border: 2px solid var(--light);
-  margin-top: 2em;
-  margin-bottom: 2em; */
 }
 
 /* LAYOUT */
@@ -150,8 +117,6 @@ ul img {
   }
 } */
 
-
-
 /* MODULES */
 .backToTop {
   background-color: white;
@@ -159,7 +124,6 @@ ul img {
   margin: 1rem;
   z-index: 10;
 }
-
 
 .student {
   padding: 2rem;
@@ -173,6 +137,13 @@ ul img {
   width: 26vw;
   text-align: left;
 }
+
+
+/* .avatar {
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  border: 3px solid grey;
+  max-width: 100%;
+} */
 
 /* STATE */
 /* src https://codepen.io/EastingAndNorthing/pen/aNWrZz */
@@ -188,24 +159,25 @@ h3:empty {
   background-color: rgb(216,191,216);
 }
 
-
-/*
-.square {
+.avatarWrapper {
   position: relative;
-  width: 50%;
+  width: 100%;
 }
 
-.square:after {
+.avatarWrapper:after {
   content: "";
   display: block;
   padding-bottom: 100%;
 }
 
-.content {
+img.avatar{
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  border: 3px solid grey;
+  background-color: rgb(216,191,216, 0.7);
   position: absolute;
   width: 100%;
-  height: 100%
-} */
+  height: 100%;
+}
 
 
 .loading {
