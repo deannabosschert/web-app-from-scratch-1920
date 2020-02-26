@@ -9,7 +9,6 @@ import {
 } from "./render.js"
 
 export function loadNerds() {
-  //   // https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939
   const endpoint = "https://api.github.com"
   const minor = "/cmda-minor-web"
   const course = "/web-app-from-scratch-"
