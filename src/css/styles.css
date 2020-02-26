@@ -41,23 +41,19 @@ main {
 }
 
 section {
-  opacity: 0.1;
+  opacity: 0;
   margin: 0.5rem;
   /* display: flex; */
   /* background-color: light grey; */
   text-align: center;
 }
 
-section:active {
-  opacity: 1;
-}
-
 section[data-route="/"] {
-  background-color: yellow;
+  position: absolute;
 }
 
 section[data-route="stats"] {
-  background-color: blue;
+  position: absolute;
 }
 /*
 section[data-route="progress"] {
@@ -133,7 +129,10 @@ ul img {}
   background-color: white;
   padding: 1rem;
   margin: 1rem;
-  z-index: 10;
+  margin-top: 20vh;
+  margin-left: 80%;
+  z-index: 20;
+  position: fixed;
 }
 
 .student {
