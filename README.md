@@ -92,7 +92,6 @@ _Which actors are there in your application? (actor diagram)_
 -
 
 ## ↔️ Interaction diagram
-
 _How does flowed interaction through the application? (interaction diagram)_
 ![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/interactiondiagram.png)
 
@@ -108,10 +107,9 @@ Welke volgorde heeft je code?
 - [ ] Wie schrijft bepaalde dingen zelf? (idk if possible, nice to have)
 
 ## 🌍 Design patterns
-
-- opsomming
-- van
-- patterns
+- The usage of Modules?
+- The usage of .map .filter .reduce?
+- My 'filterArray'-function?
 
 ## 👍🏽 Best practices
 - Work in branches, even if it's a one-man project. It helps staying focused on one feature until it's finished, and keeps your from doing 10 different things at the same time. Saves you merge conflicts, too.
@@ -121,6 +119,10 @@ Welke volgorde heeft je code?
 - Always fix your .gitignore-contents asap; node_modules or the like won't ever be pushed that way. 
 - Styling comes last. It's gonna change anyways so most of the time, it's better to fix the technical stuff first.
 - Don't use declarations in the global scope.
+- Start your project with writing down the future function names (pre-actors, basically).
+- Make your own template for your readme
+- Google, google, google. 99% of the time, it'll get you to the solution of your problem.
+- Set timers for solving problems that aren't super relevant in the current sprint but you do would like to work on; 25 mins tops, otherwise you'll be stuck with this for too long.
 - Make an actor diagram halfway through, it's a great reminder to refactor the code.
 - Explicitly limit the scope of your functions
 - Remember that most problems/features that have to do with the UI, can be fixed with mainly CSS.
@@ -131,7 +133,7 @@ Welke volgorde heeft je code?
 ## 🗃 Data
 
 ### 🐒 Github API
-
+_What external data source is featured in your project and what are its properties?_
 The API I've used is [Github's](https://api.github.com).
 
 (wat is er interessant aan de data?)
@@ -144,18 +146,13 @@ The endpoint I'm using on the overview page is the following:
 
 
 #### Rate limiting
-
 For API requests using Basic Authentication or OAuth, you can make up to 5000 requests per hour. Authenticated requests are associated with the authenticated user, regardless of whether Basic Authentication or an OAuth token was used. This means that all OAuth applications authorized by a user share the same quota of 5000 requests per hour when they authenticate with different tokens owned by the same user.
 
 For unauthenticated requests, the rate limit allows for up to 60 requests per hour. Unauthenticated requests are associated with the originating IP address, and not the user making requests.
 
-Note that the Search API has custom rate limit rules.
+So, if you aren't an authenticated user, your rate limit is 60 requests per hour.
 
-The returned HTTP headers of any API request show your current rate limit status.
-
-If you aren't an authenticated user, your rate limit is 60 requests per hour.
-
-If you do exceed this limit, you'll see the following error message:
+If you do exceed this limit, you'll see the following error message and it's probably a better idea to request as an Authenticated user:
 ``` js
 HTTP/1.1 403 Forbidden
 Date: Tue, 20 Aug 2013 14:50:41 GMT
@@ -169,14 +166,15 @@ X-RateLimit-Reset: 1377013266
 }
 ```
 
-### 💽 Data cleaning
 
-Wat is er gedaan met de opgehaalde data?
-*Filtering middels array.map*
+
+### 💽 Data cleaning
+_What has been done with the fetched data?_
+*Filtering the data using array.filter*
 
 ```js
 function filterArray(array) {
-  return array.map(results => {
+  return array.filter(results => {
     return {
       name: results.owner.login,
       description: results.description,
@@ -190,24 +188,28 @@ function filterArray(array) {
 }
 ```
 
-## 👯🏿‍ Features (+ wishlist)
+*Rendering the data to html-representation using array.map *
 
-What would you like to add (feature wishlist / backlog)?
+*Reduce the output to the browser, following a certain UI*
+
+
+## 👯🏿‍ Features (+ wishlist)
+_What would you like to add (feature wishlist / backlog)?_
 - [x] Overview van de huidige klas
 - [ ] Detailpagina per student
 
-- [ ] 'Stats'-pagina:
-- [ ] Leaderboard per ding (aantal commits, aantal fixed issues, aantal openstaande issues)
-- [ ] 'Wie heeft wat wel en wie wat niet' -> stats (branches, wiki, license)
-- [ ] Wie is waar in 't programma'? (check voor bestand met 'router', 'routie', etc)
-- [ ] Wie schrijft bepaalde dingen zelf? (idk if possible, nice to have)
+- [ ] Showing the latest commits per student
+- [ ] Showing a 'nerd-leaderboard' based on the amount of lines/commits, fixed issues, open issues etc
+- [ ] Showing stats about the implementation of certain things (who uses branches, pushes enough commits, has a wiki, has a license added etc)
+- [ ] Who's where in the curriculum? (check presence of 'routing', 'templating', 'modules' etc.
+- [ ] Who uses micro libraries, and who's a supernerd and e.g. writes their own virtual DOM or router?
 
 ## 🏫 Assignment
-
+<details>
+  <summary></strong> (click to expand)</summary>
 In this course I learned to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API of my choice, manipulated and finally shown in the UI of the App. I have learned different ways to structure code and developed my own coding style. With the gained knowledge I'm able to build interactive prototypes, based on real data. Also, I gained a better understanding of the how API's, frameworks and libraries work.
 
 ### Learning goals
-
 - _You can add structure to your code by applying patterns. You can defend the choice for the chosen patterns_
 - _You can retrieve data, manipulate it and dynamically convert it to html elements using templating_
 - _You understand how you can work with an external API using asynchronous code_
@@ -216,7 +218,6 @@ In this course I learned to build a web application without frameworks or unnece
 ### Week 1 - Hello API 🐒
 
 Goal: Retrieve data from an API and render it in an overview page.
---> hoe heb ik dit gedaan? --> verwijzing naar wiki, of inklappen?
 
 ### Week 2 - Design and Refactor 🛠
 
@@ -225,6 +226,8 @@ Goal: Design the web app. Add routes and states. Rendering detail page.
 ### Week 3 - Wrapping up 🎁
 
 Goal: Manipulate data. Split code into modules. Reflect on end result
+
+</details>
 
 ### Rubric
 
@@ -235,15 +238,12 @@ Goal: Manipulate data. Split code into modules. Reflect on end result
 https://developer.github.com/v3/
 
 ### Credits
-
-- [Github repo cmd](https://documentup.com/shelljs/)
-- [Repo klasgenoot](https://github.com)
-- [idk sumting](https://github.com/)
-
+- Our superamazingteachers at the [minor WebDev @CMD](https://github.com/cmda-minor-web/web-app-from-scratch-1920)
 - [Async loading- Joost](https://codepen.io/collection/AyJdPK/)
+- [SPA web app- Laurens](https://vizhub.com/Razpudding/21168a56571643e8ba7951892787f9b3?edit=files&file=index.js)
+- [Routie](https://codepen.io/joostf/pen/jOPPMLK)
 
 ### Small inspiration sources
-
 - [Responsive square](https://spin.atomicobject.com/2015/07/14/css-responsive-square/) for avatar skeleton
 
 ## 🗺️ License
