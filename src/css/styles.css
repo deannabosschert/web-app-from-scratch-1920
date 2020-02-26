@@ -167,7 +167,7 @@ ul li {
 
 .student img {
   animation: shineBright 2.1s linear;
-  animation-duration: 8s;
+  animation-iteration-count: 20;
 }
 
 .avatarWrapper {
