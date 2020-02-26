@@ -1,5 +1,5 @@
 // function routeDingen() {
-//   import Router from "./routie.js"
+//   import Router from "./helpers/routie.js"
 //   const router = require("router")
 //   var router = {
 //     handle: function() {
