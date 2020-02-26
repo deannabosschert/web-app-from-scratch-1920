@@ -53,7 +53,7 @@
 //
 //   router.handle()
 // }
-export function router() {
+export function routerDingen() {
 
   // function routeDingen() {
   routie({
@@ -62,7 +62,7 @@ export function router() {
     },
     stats: () => {
       updateUI('stats')
-    }
+    },
   })
   // }
 
@@ -76,11 +76,11 @@ export function router() {
     sections.forEach(section => {
       section.classList.remove('active')
     })
-    const activeSection = document.querySelector(`[data-route=${route}]`)
+    const activeSection = document.querySelector(`[data-route="${route}"]`)
     console.log(activeSection)
     activeSection.classList.add('active')
   }
 
 }
 
-export default router
+export default routerDingen

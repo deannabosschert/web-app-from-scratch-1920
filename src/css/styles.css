@@ -41,24 +41,32 @@ main {
 }
 
 section {
-  opacity: 0.4;
+  opacity: 0.1;
   margin: 0.5rem;
   /* display: flex; */
   /* background-color: light grey; */
   text-align: center;
 }
 
+section:active {
+  opacity: 1;
+}
+
 section[data-route="/"] {
   background-color: yellow;
+}
+
+section[data-route="#/"] {
+  background-color: red;
 }
 
 section[data-route="stats"] {
   background-color: blue;
 }
-
+/*
 section[data-route="progress"] {
   background-color: #ccccff;
-}
+} */
 
 .active {
   opacity: 1;
