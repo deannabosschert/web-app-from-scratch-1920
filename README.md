@@ -1,11 +1,11 @@
-## Web App From Scratch @cmda-minor-web 1920
-
 # Class of 2020
-
+## Web App From Scratch @cmda-minor-web 1920
 https://wafs.netlify.com/
-![screenshot of web app](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/screenshot_webApp.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/wafs/deploys)
+
+![screenshot of web app](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/screenshot_webApp.png)
+
 
 <details>
   <summary><strong>Table of Contents</strong> (click to expand)</summary>
