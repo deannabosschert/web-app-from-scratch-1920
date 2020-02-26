@@ -42,76 +42,58 @@ https://wafs.netlify.com/
 </details>
 
 ## ✅ To-do
-
-- [x] Refactor code (all global now), but I'll save that for when I've fixed routing completely
-- [ ] Functional shizzle (refactor)
 - [ ] Add info about API (rate limit, etc)
 - [ ] Add search (in-repo or global? idk yet)
-- [x] Add error handling
+- [ ] Error handling _everywhere_
 - [ ] Add function to captitalize usernames
-- [ ] Add detail page
-- [ ] Add stats page
+- [ ] Add detail page (=stats)
 - [ ] Add interaction diagram
 - [ ] Styling
 - [ ] Add datavisualization
 - [ ] Finish readme
-- [ ] Prepare peer review
 - [ ] English-Dutch variable names, comments etc --> all in English (of Dunglish lol)
 - [ ] Revert everything to arrowfunctions
-- [ ] Better function+variablenames
-- [ ] The huge ass injected html-list fixen
-- [ ] Fix comments in code
-- [ ] Templating engine adden
 - [ ] Apply nerd-score? gouden frame voor de grootste nerd
-
-
 - [ ] Localstorage.getItem (ietsgetten) in een if-state
   `if (localStorage.getItem('stations')) {}`
 
 ## 📋 Concept
-
-What does your app do, what is the goal? (passing butter)
+_What does your app do, what is the goal? (passing butter)_
 This app is for keeping track of the current progress of the Web App From Scratch class in the minor Webdevelopment (2020).
 
 ## ⚙️ Installation
-
-This repository doesn't have any dependencies.. yet.
-
-Clone this repository to your own device, then run `index.html`.
+Clone this repository to your own device:
 ```bash
 $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 ```
+Then, run navigate to the folder and run:
 
-
-```json
-{
-  "name": "my-package",
-  "version": "1.0.0",
-  "scripts": {
-    "iets": "iets"
-  },
-  "devDependencies": {
-    "iets": "*"
-  }
-}
+```bash
+python -m SimpleHTTPServer 8000`
 ```
 
-## 🧑🏼‍ Actor Diagram
+#### Helpers
+The used external packages are placed in the 'helpers'-folder as a static file.
+- [Transparency](https://github.com/leonidas/transparency)
+- [Routie](https://github.com/jgallen23/routie)
+- [Fetcher](https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939)
 
-Which actors are there in your application? (actor diagram)
+
+## 🧑🏼‍ Actor Diagram
+_Which actors are there in your application? (actor diagram)_
 ![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/actordiagram.png)
 
 *To-do*
 - [ ] 'API DB" = GitHub API-source
-- [ ] LocalStorage; geef aan dat het erin wordt gepleurd
-- [ ] render.error bij routing?? lmao wat 👽
+- [ ] LocalStorage; geef aan dat het erin wordt gezet
+- [ ] render.error bij routing?? fixen 👽
 - [ ] Add overview, stats etc bij router
 - [ ] Nieuwe apicall bij detailpagina
 -
 
 ## ↔️ Interaction diagram
 
-How does flowed interaction through the application? (interaction diagram)
+_How does flowed interaction through the application? (interaction diagram)_
 ![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/interactiondiagram.png)
 
 Welke volgorde heeft je code?
@@ -132,10 +114,19 @@ Welke volgorde heeft je code?
 - patterns
 
 ## 👍🏽 Best practices
-
-- opsomming
-- van
-- practices
+- Work in branches, even if it's a one-man project. It helps staying focused on one feature until it's finished, and keeps your from doing 10 different things at the same time. Saves you merge conflicts, too.
+- ^ also helps with 'closing' a feature, so you are more likely to move on to the next. Too little time, too much ideas.
+- Commit early, commit often.
+- Make single-purpose commits.
+- Always fix your .gitignore-contents asap; node_modules or the like won't ever be pushed that way. 
+- Styling comes last. It's gonna change anyways so most of the time, it's better to fix the technical stuff first.
+- Don't use declarations in the global scope.
+- Make an actor diagram halfway through, it's a great reminder to refactor the code.
+- Explicitly limit the scope of your functions
+- Remember that most problems/features that have to do with the UI, can be fixed with mainly CSS.
+- Do not use .innerHTML
+- If there's an error, walk through your code from the top/beginning; explain it to your rubber ducky and state where certain data is passed.
+- Implement useful error handling.
 
 ## 🗃 Data
 
