@@ -1,7 +1,3 @@
-// import {
-//   Transparency
-// } from "./transparency.js"
-
 export function renderNerds(nerds) {
   console.log(
     "%c Test!",
@@ -34,7 +30,6 @@ export function renderNerds(nerds) {
         return this.html_url;
       }
     }
-
   };
 
   Transparency.render(root, nerdList, directives)

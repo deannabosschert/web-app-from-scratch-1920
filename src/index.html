@@ -17,36 +17,39 @@
   </header>
   <main>
     <ul>
-      <li><a href="">Home</a></li>
+      <li><a href="#/">Home</a></li>
       <li><a href="#stats">Stats</a></li>
       <!-- <li><a href="#progress">Progress</a></li> -->
     </ul>
-    <section data-route="/" id="home">
-      <h2> Overview </h2>
-      <div class="loader"></div>
-      <section id="overview">
-        <article class="student">
-          <h3 class="projectName"></h3>
-          <p class="description"></p>
-          <a class="html_url">
-          <div class="avatarWrapper">
-            <img class="avatar" src="">
-          </div>
-            <p class="homepage"></p>
-          </a>
-          <p class="id"></p>
-          <p class="node_id"></p>
-          <p class="name"></p>
-          <p class="full_name"></p>
-          <p class="private"></p>
-          <p class="owner"></p>
-        </article>
+    <div class="sectionWrapper">
+      <section data-route="/" id="/src/" class="active">
+        <h2> Overview </h2>
+        <div class="loader"></div>
+        <div id="overview">
+          <article class="student">
+            <h3 class="projectName"></h3>
+            <p class="description"></p>
+            <a class="html_url">
+              <div class="avatarWrapper">
+                <img class="avatar">
+              </div>
+              <p class="homepage"></p>
+            </a>
+            <p class="id"></p>
+            <p class="node_id"></p>
+            <p class="name"></p>
+            <p class="full_name"></p>
+            <p class="private"></p>
+            <p class="owner"></p>
+          </article>
+        </div>
       </section>
-    </section>
 
-    <section data-route="stats" id="stats">
-      <h2> Hier komen stats te staan </h2>
-    </section>
+      <section data-route="stats" id="/src/#stats">
+        <h2> Hier komen stats te staan </h2>
+      </section>
+
+    </div>
     <a class="backToTop" href="#top">Back to top</a>
     <!--
       <section data-route="progress" id="progress">
@@ -54,8 +57,8 @@
         <a class="backToTop" href="#top">Back to top</a>
       </section> -->
   </main>
-  <script src="js/modules/transparency.js"></script>
-  <script src="js/modules/routie.js"></script>
+  <script src="js/modules/helpers/transparency.js"></script>
+  <script src="js/modules/helpers/routie.js"></script>
   <script type="module" src="js/app.js"></script>
 </body>
 

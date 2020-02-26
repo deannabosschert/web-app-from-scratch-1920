@@ -1,58 +1,23 @@
-// function routeDingen() {
-//   import Router from "./routie.js"
-//   const router = require("router")
-//   var router = {
-//     handle: function() {
-//       routie(
-//         "/",
-//         function() {
-//           console.log("alles")
-//         },
-//         ":id",
-//         function() {
-//           console.log(id)
-//         }
-//       )
-//     }
-//   }
-//
-//   router.handle()
-// }
+export function routeNerds() {
+  routie({
+    '/': () => {
+      updatePage('/')
+    },
+    stats: () => {
+      updatePage('stats')
+    },
+  })
 
-//
-// function routeDingen() {
-//
-// routie({
-//
-//   // "":() => {
-//   //   updateUI('home') // app.init()
-//   //  },
-//   home: () => {
-//     updateUI('home')
-//   },
-//   stats: () => {
-//     updateUI('stats')
-//   },
-//   progress: () => {
-//     updateUI('progress')
-//   }
-// })
-// }
+  // update page from route
+  function updatePage(route) {
+    const sections = document.querySelectorAll('section')
+    sections.forEach(section => {
+      section.classList.remove('active')
+    })
+    const activeSection = document.querySelector(`[data-route="${route}"]`)
+    console.log(activeSection)
+    activeSection.classList.add('active')
+  }
+}
 
-// router.handle()
-
-
-
-
-
-
-// // update UI from route (hashchange)
-// function updateUI(route) {
-//   const sections = document.querySelectorAll('section')
-//   sections.forEach(section => {
-//     section.classList.remove('active')
-//   })
-//   activeSection = document.querySelector(`[data-route=${route}]`)
-//   console.log(activeSection)
-//   activeSection.classList.add('active')
-// }
+export default routeNerds

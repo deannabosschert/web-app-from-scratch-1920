@@ -2,6 +2,9 @@ import {
   loadingState
 } from "./modules/loader.js"
 import {
+  routeNerds
+} from "./modules/routing.js"
+import {
   loadNerds
 } from "./modules/API.js"
 import {
@@ -9,8 +12,8 @@ import {
 } from "./modules/render.js"
 
 (function init() {
-
   (async function checkLocalStorage() {
+    routeNerds()
     loadingState('active')
     const storage = window.localStorage
     if (storage.getItem("githubRepos") === null) {

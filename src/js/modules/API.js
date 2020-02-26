@@ -1,6 +1,6 @@
 import {
   fetcher
-} from "./fetcher.js"
+} from "./helpers/fetcher.js"
 import {
   storeNerds
 } from "./store.js"
