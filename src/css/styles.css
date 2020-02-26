@@ -41,20 +41,28 @@ main {
 }
 
 section {
-  opacity: 1;
+  opacity: 0.4;
   margin: 0.5rem;
   /* display: flex; */
   /* background-color: light grey; */
   text-align: center;
 }
 
-/* section[data-route="stats"] {
-  background-color: #ffd3d9;
+section[data-route="/"] {
+  background-color: yellow;
+}
+
+section[data-route="stats"] {
+  background-color: blue;
 }
 
 section[data-route="progress"] {
   background-color: #ccccff;
-} */
+}
+
+.active {
+  opacity: 1;
+}
 /* section.active {
   opacity: 1;
 } */

@@ -2,6 +2,9 @@ import {
   loadingState
 } from "./modules/loader.js"
 import {
+  router
+} from "./modules/routing.js"
+import {
   loadNerds
 } from "./modules/API.js"
 import {
@@ -9,6 +12,7 @@ import {
 } from "./modules/render.js"
 
 (function init() {
+  router()
 
   (async function checkLocalStorage() {
     loadingState('active')
