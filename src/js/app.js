@@ -2,7 +2,7 @@ import {
   loadingState
 } from "./modules/loader.js"
 import {
-  routerDingen
+  routeNerds
 } from "./modules/routing.js"
 import {
   loadNerds
@@ -11,11 +11,9 @@ import {
   renderNerds
 } from "./modules/render.js"
 
-
-
 (function init() {
   (async function checkLocalStorage() {
-    routerDingen()
+    routeNerds()
     loadingState('active')
     const storage = window.localStorage
     if (storage.getItem("githubRepos") === null) {
