@@ -56,10 +56,6 @@ section[data-route="/"] {
   background-color: yellow;
 }
 
-section[data-route="#/"] {
-  background-color: red;
-}
-
 section[data-route="stats"] {
   background-color: blue;
 }
