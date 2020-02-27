@@ -57,7 +57,7 @@ https://wafs.netlify.com/
   `if (localStorage.getItem('stations')) {}`
 
 ## 📋 Concept
-_What does your app do, what is the goal? (passing butter)_
+_What does your app do, what is the goal? (passing butter)_ 
 This app is for keeping track of the current progress of the Web App From Scratch class in the minor Webdevelopment (2020).
 
 ## ⚙️ Installation
@@ -65,14 +65,15 @@ Clone this repository to your own device:
 ```bash
 $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 ```
-Then, navigate to this cloned folder and run:
+Then, navigate to this folder and run:
 
 ```bash
 python -m SimpleHTTPServer 8000`
 ```
 
 #### Helpers
-The used external packages are placed in the 'helpers'-folder as a static file.
+The used external packages are located in the 'helpers'-folder as a static file.
+Used helpers and their sources:
 - [Transparency](https://github.com/leonidas/transparency)
 - [Routie](https://github.com/jgallen23/routie)
 - [Fetcher](https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939)
@@ -132,7 +133,7 @@ Welke volgorde heeft je code?
 ## 🗃 Data
 
 ### 🐒 Github API
-_What external data source is featured in your project and what are its properties?_
+_What external data source is featured in your project and what are its properties?_ 
 The API I've used is [Github's](https://api.github.com).
 
 I'm using this API to fetch data of the repositories that are forked from _cmda-minor-web/web-app-from-scratch-1920_.
@@ -272,8 +273,8 @@ default_branch: "master"
 
 
 ### 💽 Data cleaning
-_What has been done with the fetched data?_
-*Filtering the data using array.filter*
+_What has been done with the fetched data?_ 
+#### Filtering the data using array.filter
 
 ```js
 function filterArray(array) {
@@ -309,7 +310,7 @@ __proto__: Object
 }
 ```
 
-*Rendering the data to html-representation using array.map *
+#### Rendering the data to html-representation using array.map
 
 ```html
    <article class="student">
@@ -330,11 +331,14 @@ __proto__: Object
           </article>
 ```
 
-*Reduce the output to the browser, following a certain UI*
+#### Reduce the output to the browser, following a certain UI
+```html
+(rendered html)
+```
 
 
 ## 👯🏿‍ Features (+ wishlist)
-_What would you like to add (feature wishlist / backlog)?_
+_What would you like to add (feature wishlist / backlog)?_ 
 - [x] Overview van de huidige klas
 - [ ] Detailpagina per student
 
@@ -382,6 +386,9 @@ https://developer.github.com/v3/
 - [Async loading- Joost](https://codepen.io/collection/AyJdPK/)
 - [SPA web app- Laurens](https://vizhub.com/Razpudding/21168a56571643e8ba7951892787f9b3?edit=files&file=index.js)
 - [Routie](https://codepen.io/joostf/pen/jOPPMLK)
+- [Transparency](https://github.com/leonidas/transparency)
+- [Routie](https://github.com/jgallen23/routie)
+- [Fetcher](https://codeburst.io/fetch-api-was-bringing-darkness-to-my-codebase-so-i-did-something-to-illuminate-it-7f2d8826e939)
 
 ### Small inspiration sources
 - [Responsive square](https://spin.atomicobject.com/2015/07/14/css-responsive-square/) for avatar skeleton
