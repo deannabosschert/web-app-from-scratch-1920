@@ -3,6 +3,15 @@
 https://wafs.netlify.com/
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/wafs/deploys)
+]
+
+**Web-app with regular internet** 
+
+![gif of web app- regular internet](https://media.giphy.com/media/eivD9ZfqX3JfLctVVq/giphy.gif)
+
+**Web-app with slow 3G-internet (showing skeletonUI)** 
+
+![gif of web app- slow 3g internet](https://media.giphy.com/media/W5O0S4Ifxn0bQwjSaZ/giphy.gif)
 
 ![screenshot of web app](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/screenshot_webApp.png)
 
