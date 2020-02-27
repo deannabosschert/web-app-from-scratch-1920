@@ -36,7 +36,6 @@ https://wafs.netlify.com/
   * [Small inspiration sources](#small-inspiration-sources)
 - [🗺️ License](#----license)
 
-
 <!-- tocstop -->
 
 </details>
@@ -66,7 +65,7 @@ Clone this repository to your own device:
 ```bash
 $ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
 ```
-Then, run navigate to the folder and run:
+Then, navigate to this cloned folder and run:
 
 ```bash
 python -m SimpleHTTPServer 8000`
@@ -136,13 +135,13 @@ Welke volgorde heeft je code?
 _What external data source is featured in your project and what are its properties?_
 The API I've used is [Github's](https://api.github.com).
 
-(wat is er interessant aan de data?)
+I'm using this API to fetch data of the repositories that are forked from _cmda-minor-web/web-app-from-scratch-1920_.
 
-
-#### Endpoint(s)
+#### Properties
 The endpoint I'm using on the overview page is the following:
 `https://api.github.com/repos/cmda-minor-web/web-app-from-scratch-1920/forks?per_page=50`
 
+Base URL: `${endpoint}/repos${minor}${course}${year}${tag}?per_page=${limit}`
 
 
 #### Rate limiting
@@ -166,6 +165,110 @@ X-RateLimit-Reset: 1377013266
 }
 ```
 
+If you *are* authenticated, you should be able to receive the following data:
+```json
+(49) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+```
+<details>
+  <summary><strong>Individual data object:</strong> (click to expand)</summary>
+  
+```json
+{
+  id: 237659708
+node_id: "MDEwOlJlcG9zaXRvcnkyMzc2NTk3MDg="
+name: "web-app-from-scratch-1920"
+full_name: "deannabosschert/web-app-from-scratch-1920"
+private: false
+owner:
+login: "deannabosschert"
+id: 36165810
+node_id: "MDQ6VXNlcjM2MTY1ODEw"
+avatar_url: "https://avatars1.githubusercontent.com/u/36165810?v=4"
+gravatar_id: ""
+url: "https://api.github.com/users/deannabosschert"
+html_url: "https://github.com/deannabosschert"
+followers_url: "https://api.github.com/users/deannabosschert/followers"
+following_url: "https://api.github.com/users/deannabosschert/following{/other_user}"
+gists_url: "https://api.github.com/users/deannabosschert/gists{/gist_id}"
+starred_url: "https://api.github.com/users/deannabosschert/starred{/owner}{/repo}"
+subscriptions_url: "https://api.github.com/users/deannabosschert/subscriptions"
+organizations_url: "https://api.github.com/users/deannabosschert/orgs"
+repos_url: "https://api.github.com/users/deannabosschert/repos"
+events_url: "https://api.github.com/users/deannabosschert/events{/privacy}"
+received_events_url: "https://api.github.com/users/deannabosschert/received_events"
+type: "User"
+site_admin: false
+__proto__: Object
+html_url: "https://github.com/deannabosschert/web-app-from-scratch-1920"
+description: "Web App From Scratch @cmda-minor-web 1920"
+fork: true
+url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920"
+forks_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/forks"
+keys_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/keys{/key_id}"
+collaborators_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/collaborators{/collaborator}"
+teams_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/teams"
+hooks_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/hooks"
+issue_events_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/issues/events{/number}"
+events_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/events"
+assignees_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/assignees{/user}"
+branches_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/branches{/branch}"
+tags_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/tags"
+blobs_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/git/blobs{/sha}"
+git_tags_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/git/tags{/sha}"
+git_refs_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/git/refs{/sha}"
+trees_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/git/trees{/sha}"
+statuses_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/statuses/{sha}"
+languages_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/languages"
+stargazers_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/stargazers"
+contributors_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/contributors"
+subscribers_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/subscribers"
+subscription_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/subscription"
+commits_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/commits{/sha}"
+git_commits_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/git/commits{/sha}"
+comments_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/comments{/number}"
+issue_comment_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/issues/comments{/number}"
+contents_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/contents/{+path}"
+compare_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/compare/{base}...{head}"
+merges_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/merges"
+archive_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/{archive_format}{/ref}"
+downloads_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/downloads"
+issues_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/issues{/number}"
+pulls_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/pulls{/number}"
+milestones_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/milestones{/number}"
+notifications_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/notifications{?since,all,participating}"
+labels_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/labels{/name}"
+releases_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/releases{/id}"
+deployments_url: "https://api.github.com/repos/deannabosschert/web-app-from-scratch-1920/deployments"
+created_at: "2020-02-01T18:36:35Z"
+updated_at: "2020-02-26T23:46:05Z"
+pushed_at: "2020-02-26T23:54:29Z"
+git_url: "git://github.com/deannabosschert/web-app-from-scratch-1920.git"
+ssh_url: "git@github.com:deannabosschert/web-app-from-scratch-1920.git"
+clone_url: "https://github.com/deannabosschert/web-app-from-scratch-1920.git"
+svn_url: "https://github.com/deannabosschert/web-app-from-scratch-1920"
+homepage: "https://deannabosschert.github.io/web-app-from-scratch-1920/src"
+size: 4070
+stargazers_count: 0
+watchers_count: 0
+language: "JavaScript"
+has_issues: true
+has_projects: true
+has_downloads: true
+has_wiki: true
+has_pages: true
+forks_count: 0
+mirror_url: null
+archived: false
+disabled: false
+open_issues_count: 1
+license: {key: "mit", name: "MIT License", spdx_id: "MIT", url: "https://api.github.com/licenses/mit", node_id: "MDc6TGljZW5zZTEz"}
+forks: 0
+open_issues: 1
+watchers: 0
+default_branch: "master"
+}
+```
+</details>
 
 
 ### 💽 Data cleaning
@@ -188,7 +291,44 @@ function filterArray(array) {
 }
 ```
 
+Result:
+```json
+{
+name: "web-app-from-scratch-1920", description: "Web App From Scratch @cmda-minor-web 1920", avatar: "https://avatars1.githubusercontent.com/u/36165810?v=4", homepage: "https://deannabosschert.github.io/web-app-from-scratch-1920/src", id: 237659708, …}
+name: "web-app-from-scratch-1920"
+description: "Web App From Scratch @cmda-minor-web 1920"
+avatar: "https://avatars1.githubusercontent.com/u/36165810?v=4"
+homepage: "https://deannabosschert.github.io/web-app-from-scratch-1920/src"
+id: 237659708
+node_id: "MDEwOlJlcG9zaXRvcnkyMzc2NTk3MDg="
+full_name: "deannabosschert/web-app-from-scratch-1920"
+private: false
+owner: {login: "deannabosschert", id: 36165810, node_id: "MDQ6VXNlcjM2MTY1ODEw", avatar_url: "https://avatars1.githubusercontent.com/u/36165810?v=4", gravatar_id: "", …}
+html_url: "https://github.com/deannabosschert/web-app-from-scratch-1920"
+__proto__: Object
+}
+```
+
 *Rendering the data to html-representation using array.map *
+
+```html
+   <article class="student">
+            <h3 class="projectName"></h3>
+            <p class="description"></p>
+            <a class="html_url">
+              <div class="avatarWrapper">
+                <img class="avatar">
+              </div>
+              <p class="homepage"></p>
+            </a>
+            <p class="id"></p>
+            <p class="node_id"></p>
+            <p class="name"></p>
+            <p class="full_name"></p>
+            <p class="private"></p>
+            <p class="owner"></p>
+          </article>
+```
 
 *Reduce the output to the browser, following a certain UI*
 
@@ -248,4 +388,5 @@ https://developer.github.com/v3/
 
 ## 🗺️ License
 
-MIT dingen
+Author: [Deanna Bosschert](https://github.com/deannabosschert) , license by
+[MIT](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/LICENSE)
