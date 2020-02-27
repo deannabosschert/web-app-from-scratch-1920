@@ -67,6 +67,7 @@ https://wafs.netlify.com/
 
 ## 📋 Concept
 _What does your app do, what is the goal? (passing butter)_ 
+
 This app is for keeping track of the current progress of the Web App From Scratch class in the minor Webdevelopment (2020).
 
 ## ⚙️ Installation
