@@ -3,7 +3,7 @@
 https://wafs.netlify.com/
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)(https://app.netlify.com/sites/wafs/deploys)
-]
+
 
 **Web-app with regular internet** 
 
