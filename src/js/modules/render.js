@@ -1,5 +1,5 @@
 const renderNerds = {
-  overview(nerds) {
+  overview: function(nerds) {
     const overview = document.getElementById("overview")
     const nerdList = nerds.map(nerd => ({
       projectName: nerd.name,
@@ -13,6 +13,7 @@ const renderNerds = {
       private: 'Private repo?: ' + nerd.private
     }))
 
+    // const nerdAvatars = JSON.parse(storage.getItem("githubAvatars"))
     // const avatarIMG = nerdAvatars.map(nerdAvatar => ({
     //   avatar: nerdAvatar.transparency.model.avatar
     // }))
