@@ -9,6 +9,7 @@ const store = {
     console.log("adding avatars to localStorage")
     const nerdAvatars = document.querySelectorAll('div.avatarWrapper');
     localStorage.setItem('githubAvatars', JSON.stringify(nerdAvatars));
+    return nerdAvatars
   }
 }
 
