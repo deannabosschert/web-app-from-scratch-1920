@@ -43,14 +43,25 @@ section {
   /* display: flex; */
   /* background-color: light grey; */
   text-align: center;
-}
-
-section[data-route="/"] {
   position: absolute;
 }
 
-section[data-route="stats"] {
+section[data-route="/"]:active {
   position: absolute;
+  z-index: 5;
+}
+
+section[data-route="stats"]:active {
+  position: absolute;
+  z-index: 5;
+}
+section[data-route="profile"]:active {
+  position: absolute;
+  z-index: 5;
+}
+
+#oneNerd{
+  z-index: -20;
 }
 /*
 section[data-route="progress"] {
