@@ -21,8 +21,9 @@ import {
       await loadNerds()
       loadingState('')
     } else {
-      console.log("nu zit er wel data in je localStorage 🤓")
+      console.log("nu zit er (wel) data in je localStorage 🤓")
       const nerds = JSON.parse(storage.getItem("githubRepos"))
+      // const nerdAvatars = JSON.parse(storage.getItem("githubAvatars"))
       renderNerds(nerds)
       loadingState('')
     }

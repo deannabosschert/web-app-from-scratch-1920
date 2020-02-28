@@ -18,6 +18,10 @@ export function renderNerds(nerds) {
     private: nerd.private
   }))
 
+  // const avatarIMG = nerdAvatars.map(nerdAvatar => ({
+  //   avatar: nerdAvatar.transparency.model.avatar
+  // }))
+
   const directives = {
     avatar: {
       src: function() {
@@ -26,13 +30,13 @@ export function renderNerds(nerds) {
     },
     html_url: {
       href: function() {
-        return this.html_url;
+        return this.html_url
       }
     }
-  };
+  }
 
   Transparency.render(root, nerdList, directives)
-
+  // Transparency.render(root, avatarIMG, directives)
 }
 
 
