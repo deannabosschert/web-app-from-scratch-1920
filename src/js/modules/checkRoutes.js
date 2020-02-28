@@ -50,6 +50,10 @@ const router = {
         renderNerds.overview(nerds)
         updatePageUI('/')
       },
+      '': () => {
+        renderNerds.overview(nerds)
+        updatePageUI('/')
+      },
       stats: () => {
         renderNerds.stats(nerds)
         updatePageUI('stats')
