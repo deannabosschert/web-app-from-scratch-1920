@@ -15,8 +15,7 @@ export function renderNerds(nerds) {
     node_id: nerd.node_id,
     name: nerd.name,
     full_name: nerd.full_name,
-    private: nerd.private,
-    owner: nerd.owner
+    private: nerd.private
   }))
 
   const directives = {
