@@ -2,15 +2,14 @@ export function renderNerds(nerds) {
   const root = document.getElementById("overview")
   const nerdList = nerds.map(nerd => ({
     projectName: nerd.name,
-    description: nerd.description,
+    description: 'Description: ' + nerd.description,
     avatar: nerd.avatar,
     html_url: nerd.html_url,
-    homepage: nerd.homepage,
-    id: nerd.id,
-    node_id: nerd.node_id,
-    name: nerd.name,
-    full_name: nerd.full_name,
-    private: nerd.private
+    homepage: 'Link to profile: ' + nerd.homepage,
+    id: 'Github ID: ' + nerd.id,
+    name: 'Name: ' + nerd.name,
+    full_name: 'Full name: ' + nerd.full_name,
+    private: 'Private repo?: ' + nerd.private
   }))
 
   // const avatarIMG = nerdAvatars.map(nerdAvatar => ({
