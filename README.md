@@ -2,7 +2,7 @@
 ## Web App From Scratch @cmda-minor-web 1920
 https://wafs.netlify.com/
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/wafs/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)(https://app.netlify.com/sites/wafs/deploys)
 ]
 
 **Web-app with regular internet** 
@@ -50,25 +50,20 @@ https://wafs.netlify.com/
 </details>
 
 ## ✅ To-do
-- [ ] Add info about API (rate limit, etc)
 - [ ] Add search (in-repo or global? idk yet)
 - [ ] Error handling _everywhere_
 - [ ] Add function to captitalize usernames
-- [ ] Add detail page (=stats)
+- [ ] Work out detail-page with visualized stats
+- [ ] Work out an actual stats-page with graphs and a leaderboard, based on commmits and such.
 - [ ] Add interaction diagram
 - [ ] Styling
-- [ ] Add datavisualization
-- [ ] Finish readme
-- [ ] English-Dutch variable names, comments etc --> all in English (of Dunglish lol)
-- [ ] Revert everything to arrowfunctions
-- [ ] Apply nerd-score? gouden frame voor de grootste nerd
-- [ ] Localstorage.getItem (ietsgetten) in een if-state
+- [ ] Apply nerd-score? (based on what kind of extra's used, etc)
+- [ ] Localstorage.getItem (something) in an if-state to check with new data
   `if (localStorage.getItem('stations')) {}`
 
 ## 📋 Concept
 _What does your app do, what is the goal? (passing butter)_ 
-
-This app is for keeping track of the current progress of the Web App From Scratch class in the minor Webdevelopment (2020).
+This app is for keeping track of the current participants of the Web App From Scratch class in the minor Webdevelopment (2020).
 
 ## ⚙️ Installation
 Clone this repository to your own device:
@@ -95,28 +90,29 @@ _Which actors are there in your application? (actor diagram)_
 
 *To-do*
 - [ ] 'API DB" = GitHub API-source
-- [ ] LocalStorage; geef aan dat het erin wordt gezet
-- [ ] render.error bij routing?? fixen 👽
-- [ ] Add overview, stats etc bij router
-- [ ] Nieuwe apicall bij detailpagina
--
+- [ ] LocalStorage
+- [ ] render.error doesn't belong at router
+- [ ] Add overview, stats etc @ router
+
 
 ## ↔️ Interaction diagram
 _How does flowed interaction through the application? (interaction diagram)_
 ![interaction diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/interactiondiagram.png)
 
-Welke volgorde heeft je code?
+- Overview
+- Stats
+- Detail page
 
-- [x] Overview van de huidige klas
-- [ ] Detailpagina per student
+1. Check LocalStorage
+2. Go to routing and use routie to get the current route
+3. Then, based on if there's data in LS
+  !=, then go to loadNerds, api call, filter and store, then render the page via render.js
+  === , then render the corresponding page via render.js
 
-- [ ] 'Stats'-pagina:
-- [ ] Leaderboard per ding (aantal commits, aantal fixed issues, aantal openstaande issues)
-- [ ] 'Wie heeft wat wel en wie wat niet' -> stats (branches, wiki, license)
-- [ ] Wie is waar in 't programma'? (check voor bestand met 'router', 'routie', etc)
-- [ ] Wie schrijft bepaalde dingen zelf? (idk if possible, nice to have)
+
 
 ## 🌍 Design patterns
+Not sure, but I think those count:
 - The usage of Modules?
 - The usage of .map .filter .reduce?
 - My 'filterArray'-function?
@@ -341,17 +337,9 @@ __proto__: Object
           </article>
 ```
 
-#### Reduce the output to the browser, following a certain UI
-```html
-(rendered html)
-```
-
 
 ## 👯🏿‍ Features (+ wishlist)
 _What would you like to add (feature wishlist / backlog)?_ 
-- [x] Overview van de huidige klas
-- [ ] Detailpagina per student
-
 - [ ] Showing the latest commits per student
 - [ ] Showing a 'nerd-leaderboard' based on the amount of lines/commits, fixed issues, open issues etc
 - [ ] Showing stats about the implementation of certain things (who uses branches, pushes enough commits, has a wiki, has a license added etc)
