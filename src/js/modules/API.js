@@ -9,7 +9,7 @@ import {
 } from "./render.js"
 
 const loadNerds = {
-  overview: function() {
+  overview: () => {
     const endpoint = "https://api.github.com"
     const minor = "/cmda-minor-web"
     const course = "/web-app-from-scratch-"
@@ -21,7 +21,7 @@ const loadNerds = {
     return new Promise((resolve, reject) => {
       fetcher.get(apiLink)
         .then(res => store.set(res))
-        .then(rs => {
+        .then(() => {
           const nerds = JSON.parse(localStorage.getItem("githubRepos"))
           resolve(nerds)
           return nerds

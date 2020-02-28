@@ -11,17 +11,24 @@ const router = {
   noData() {
     // if (data === 'dataPresent')
     routie({
-      '/': function() {
+      '/': () => {
         const loadData = loadNerds.overview()
         loadData.then(nerds => {
           renderNerds.overview(nerds)
         })
-
       },
-      stats: function() {
-        loadNerds(nerds)
-        updatePageUI('stats')
-      }
+      '': () => {
+        const loadData = loadNerds.overview()
+        loadData.then(nerds => {
+          renderNerds.overview(nerds)
+        })
+      },
+      stats: () => {
+        const loadData = loadNerds.overview()
+        loadData.then(nerds => {
+          renderNerds.stats(nerds)
+        })
+      },
       // '/:id': function(nerds) {
       //   routeNerds.detail(id)
       //   // const nerdID = nerds.filter(function(nerd) {
