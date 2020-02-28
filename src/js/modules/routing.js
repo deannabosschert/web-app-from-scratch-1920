@@ -11,7 +11,7 @@ export function routeNerds() {
   // update page from route
   function updatePage(route) {
     const sections = document.querySelectorAll('section')
-    sections.map(section => {
+    sections.forEach(section => {
       section.classList.remove('active')
     })
     const activeSection = document.querySelector(`[data-route="${route}"]`)
