@@ -22,6 +22,7 @@ const router = {
         const loadData = loadNerds.overview()
         loadData.then(nerds => {
           renderNerds.overview(nerds)
+          updatePageUI('/')
         })
       },
       stats: () => {
