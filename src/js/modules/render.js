@@ -1,23 +1,20 @@
 export function renderNerds(nerds) {
-  console.log(
-    "%c Test!",
-    "text-transform: uppercase; background: #000; color: #FFF; font-size: 21pt; font-weight: bold; padding: 5px 20px; text-shadow: -2px -2px 0 rgba(251, 1, 252, .7), 2px 2px 0 rgba(4, 251, 246, 0.7)"
-  )
-
   const root = document.getElementById("overview")
   const nerdList = nerds.map(nerd => ({
     projectName: nerd.name,
-    description: nerd.description,
+    description: 'Description: ' + nerd.description,
     avatar: nerd.avatar,
     html_url: nerd.html_url,
-    homepage: nerd.homepage,
-    id: nerd.id,
-    node_id: nerd.node_id,
-    name: nerd.name,
-    full_name: nerd.full_name,
-    private: nerd.private,
-    owner: nerd.owner
+    homepage: 'Link to profile: ' + nerd.homepage,
+    id: 'Github ID: ' + nerd.id,
+    name: 'Name: ' + nerd.name,
+    full_name: 'Full name: ' + nerd.full_name,
+    private: 'Private repo?: ' + nerd.private
   }))
+
+  // const avatarIMG = nerdAvatars.map(nerdAvatar => ({
+  //   avatar: nerdAvatar.transparency.model.avatar
+  // }))
 
   const directives = {
     avatar: {
@@ -27,14 +24,13 @@ export function renderNerds(nerds) {
     },
     html_url: {
       href: function() {
-        return this.html_url;
+        return this.html_url
       }
     }
-  };
+  }
 
   Transparency.render(root, nerdList, directives)
-
+  // Transparency.render(root, avatarIMG, directives)
 }
-
 
 export default renderNerds

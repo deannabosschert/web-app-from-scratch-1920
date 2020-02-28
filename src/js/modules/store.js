@@ -1,10 +1,36 @@
-export function storeNerds(nerds) {
-  // console.log(nerds)
-  // const ava = nerds.avatar
-  // console.log(ava)
-  // ergens hier de images van de avatar, apart storen? --> later naar kijken, nog niet specifiek relevant.
-  // https://hacks.mozilla.org/2012/02/saving-images-and-files-in-localstorage/
-  return localStorage.setItem("githubRepos", JSON.stringify(nerds))
+const store = {
+  set(res) {
+    const nerds = filterArray(res)
+    console.log("adding nerds to localStorage")
+    localStorage.setItem("githubRepos", JSON.stringify(nerds))
+    return nerds
+  },
+  setImage() { // unused.. yet. Will probably have to use a small package to correctly store the image..
+    console.log("adding avatars to localStorage")
+    const nerdAvatars = document.querySelectorAll('div.avatarWrapper');
+    localStorage.setItem('githubAvatars', JSON.stringify(nerdAvatars));
+  }
 }
 
-export default storeNerds
+function filterArray(array) {
+  return array.map(data => {
+    return {
+      name: data.owner.login,
+      description: data.description,
+      avatar: data.owner.avatar_url,
+      homepage: data.homepage,
+      id: data.id,
+      node_id: data.node_id,
+      name: data.name,
+      full_name: data.full_name,
+      private: data.private,
+      owner: data.owner,
+      html_url: data.html_url
+    }
+  })
+}
+
+
+export {
+  store
+}

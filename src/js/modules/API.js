@@ -2,7 +2,7 @@ import {
   fetcher
 } from "./helpers/fetcher.js"
 import {
-  storeNerds
+  store
 } from "./store.js"
 import {
   renderNerds
@@ -20,9 +20,13 @@ export function loadNerds() {
   return new Promise((resolve, reject) => {
     fetcher.get(apiLink)
       .then(res => {
-        const nerds = filterArray(res)
-        storeNerds(nerds)
-        renderNerds(nerds)
+        return store.set(res)
+      })
+      .then(nerds => {
+        return renderNerds(nerds)
+      })
+      .then(nerds => {
+        // store.setImage()
         resolve(nerds)
       })
       .catch(err => {
@@ -30,25 +34,5 @@ export function loadNerds() {
       })
   })
 }
-
-
-function filterArray(array) {
-  return array.map(data => {
-    return {
-      name: data.owner.login,
-      description: data.description,
-      avatar: data.owner.avatar_url,
-      homepage: data.homepage,
-      id: data.id,
-      node_id: data.node_id,
-      name: data.name,
-      full_name: data.full_name,
-      private: data.private,
-      owner: data.owner,
-      html_url: data.html_url
-    }
-  })
-}
-
 
 export default loadNerds
