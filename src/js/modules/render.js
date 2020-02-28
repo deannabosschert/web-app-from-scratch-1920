@@ -63,7 +63,6 @@ const renderNerds = {
     Transparency.render(stats, nerdList)
   },
   detail: function(id) {
-    console.log(id)
     const profile = document.getElementById("oneNerd")
     const oneNerd = id.map(nerd => ({
       projectName: nerd.name,
@@ -103,8 +102,6 @@ const renderNerds = {
       disabled: nerd.disabled,
       open_issues_count: nerd.open_issues_count
     }))
-
-    console.log(oneNerd)
 
     const directives = {
       avatar: {

@@ -31,14 +31,16 @@ const router = {
           updatePageUI('stats')
         })
       },
-      // '/:id': function(nerds) {
-      //   routeNerds.detail(id)
-      //   // const nerdID = nerds.filter(function(nerd) {
-      //   //   return nerd.id == id
-      //   // })
-      //   // renderNerds.detail(nerdId)
-      //   // updatePageUI('profile')
-      // }
+      '/:id': id => {
+        const loadData = loadNerds.overview()
+        loadData.then(nerds => {
+          let oneNerd = nerds.filter(function(nerd) {
+            return nerd.id == id
+          })
+          renderNerds.detail(oneNerd)
+        })
+        updatePageUI('profile')
+      }
     })
   },
   hasData() {
