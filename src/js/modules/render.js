@@ -12,7 +12,6 @@ const renderNerds = {
       full_name: 'Full name: ' + nerd.full_name,
       private: 'Private repo?: ' + nerd.private
     }))
-
     // const nerdAvatars = JSON.parse(storage.getItem("githubAvatars"))
     // const avatarIMG = nerdAvatars.map(nerdAvatar => ({
     //   avatar: nerdAvatar.transparency.model.avatar
@@ -33,6 +32,21 @@ const renderNerds = {
 
     Transparency.render(overview, nerdList, directives)
     // Transparency.render(root, avatarIMG, directives)
+  },
+  stats: function(nerds) {
+    const stats = document.getElementById("statistics")
+    console.log(stats)
+    const nerdList = nerds.map(nerd => ({
+      projectName: 'Paginatwee' + nerd.name,
+      description: 'Description: ' + nerd.description,
+      homepage: 'Link to profile: ' + nerd.homepage,
+      id: 'Github ID: ' + nerd.id,
+      name: 'Name: ' + nerd.name,
+      full_name: 'Full name: ' + nerd.full_name,
+      private: 'Private repo?: ' + nerd.private
+    }))
+
+    Transparency.render(stats, nerdList)
   },
   detail(nerdId) {
     const profile = document.getElementById("profile")

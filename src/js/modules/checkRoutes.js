@@ -15,6 +15,7 @@ const router = {
         const loadData = loadNerds.overview()
         loadData.then(nerds => {
           renderNerds.overview(nerds)
+          updatePageUI('/')
         })
       },
       '': () => {
@@ -27,6 +28,7 @@ const router = {
         const loadData = loadNerds.overview()
         loadData.then(nerds => {
           renderNerds.stats(nerds)
+          updatePageUI('stats')
         })
       },
       // '/:id': function(nerds) {
@@ -51,15 +53,15 @@ const router = {
       stats: () => {
         renderNerds.stats(nerds)
         updatePageUI('stats')
-      },
-      '/:id': function(nerds) {
-        renderNerds.detail(id)
-        // const nerdID = nerds.filter(function(nerd) {
-        //   return nerd.id == id
-        // })
-        // renderNerds.detail(nerdId)
-        // updatePageUI('profile')
       }
+      // '/:id': function(nerds) {
+      // renderNerds.detail(id)
+      // const nerdID = nerds.filter(function(nerd) {
+      //   return nerd.id == id
+      // })
+      // renderNerds.detail(nerdId)
+      // updatePageUI('profile')
+      // }
     })
 
   }
