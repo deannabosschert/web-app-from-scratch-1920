@@ -2,7 +2,7 @@ import {
   fetcher
 } from "./helpers/fetcher.js"
 import {
-  storeNerds
+  store
 } from "./store.js"
 import {
   renderNerds
@@ -21,8 +21,9 @@ export function loadNerds() {
     fetcher.get(apiLink)
       .then(res => {
         const nerds = filterArray(res)
-        storeNerds(nerds)
+        store.set(nerds)
         renderNerds(nerds)
+        store.setImage()
         resolve(nerds)
       })
       .catch(err => {
