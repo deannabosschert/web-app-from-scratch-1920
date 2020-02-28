@@ -13,14 +13,14 @@ export function routeNerds() {
     loadingState('active')
     const storage = window.localStorage
     if (storage.getItem("githubRepos") === null) {
-      console.log("nog geen data in je localStorage, doen we zo!")
+      console.log("nog geen data in je localStorage, incoming!")
       await loadNerds()
       loadingState('')
     } else {
       console.log("nu zit er (wel) data in je localStorage 🤓")
       const nerds = JSON.parse(storage.getItem("githubRepos"))
       // const nerdAvatars = JSON.parse(storage.getItem("githubAvatars"))
-      renderNerds(nerds)
+      renderNerds.overview(nerds)
       loadingState('')
     }
   })()
@@ -36,32 +36,11 @@ export function routeNerds() {
       const specificId = data.filter(function(item) {
         return item.id == id
       })
-      render.detail(id)
+      renderNerds.detail(id)
       updatePage(id)
     }
   })
-  //
-  // function checkLS()
-  //
-  // if (window.localStorage.length !== 0) {
-  //             var data = JSON.parse(localStorage.getItem('data'))
-  //             var specificId = data.filter(function (item) {
-  //                 return item.id == id
-  //             })
-  //             render.detail(specificId)
-  //         } else { //dit werkt niet als er geen localstorage is
-  //             api.get().then(function (data) {
-  //                     console.log('geen localStorage')
-  //                     console.log(data)
-  //                     var specificId = data.filter(function (item) {
-  //                         return item.id == id
-  //                     })
-  //                     render.detail(specificId)
-  //                 })
-  //                 .catch(function (error) { //als de url ophalen mislukt, maar werkt niet echt goed
-  //                     // TODO: Handle your error!
-  //                     console.log(error)
-  //                 })
+
 
   // update page from route
   function updatePage(route) {

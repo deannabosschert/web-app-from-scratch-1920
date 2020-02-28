@@ -23,7 +23,7 @@ export function loadNerds() {
         return store.set(res)
       })
       .then(nerds => {
-        return renderNerds(nerds)
+        renderNerds.overview(nerds)
       })
       .then(nerds => {
         // store.setImage()
