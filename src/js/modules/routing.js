@@ -9,7 +9,6 @@ import {
 } from "./render.js"
 
 export function routeNerds() {
-
   (async function checkLocalStorage() {
     loadingState('active')
     const storage = window.localStorage
