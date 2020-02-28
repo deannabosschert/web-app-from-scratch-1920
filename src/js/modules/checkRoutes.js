@@ -57,15 +57,15 @@ const router = {
       stats: () => {
         renderNerds.stats(nerds)
         updatePageUI('stats')
+      },
+      '/:id': id => {
+        let oneNerd = nerds.filter(function(nerd) {
+          return nerd.id == id
+        })
+        renderNerds.detail(oneNerd)
+        updatePageUI('profile')
+        // http://localhost:8000/src/#/237659708
       }
-      // '/:id': function(nerds) {
-      // renderNerds.detail(id)
-      // const nerdID = nerds.filter(function(nerd) {
-      //   return nerd.id == id
-      // })
-      // renderNerds.detail(nerdId)
-      // updatePageUI('profile')
-      // }
     })
 
   }
