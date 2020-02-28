@@ -35,7 +35,4 @@ export function loadNerds() {
   })
 }
 
-
-
-
 export default loadNerds

@@ -5,15 +5,12 @@ const store = {
     localStorage.setItem("githubRepos", JSON.stringify(nerds))
     return nerds
   },
-  setImage() {
+  setImage() { // unused.. yet. Will probably have to use a small package to correctly store the image..
     console.log("adding avatars to localStorage")
     const nerdAvatars = document.querySelectorAll('div.avatarWrapper');
-    // Will probably have to use a small package to correctly store the image..
-    return localStorage.setItem('githubAvatars', JSON.stringify(nerdAvatars));
+    localStorage.setItem('githubAvatars', JSON.stringify(nerdAvatars));
   }
-
 }
-
 
 function filterArray(array) {
   return array.map(data => {
