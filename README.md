@@ -87,13 +87,7 @@ Used helpers and their sources:
 
 ## 🧑🏼‍ Actor Diagram
 _Which actors are there in your application? (actor diagram)_
-![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/actordiagram.png)
-
-*To-do*
-- [ ] 'API DB" = GitHub API-source
-- [ ] LocalStorage
-- [ ] render.error doesn't belong at router
-- [ ] Add overview, stats etc @ router
+![actor diagram](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/src/img/actordiagram-01.png)
 
 
 ## ↔️ Interaction diagram
