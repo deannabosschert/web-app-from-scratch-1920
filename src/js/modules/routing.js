@@ -2,6 +2,9 @@ import {
   loadingState
 } from "./loader.js"
 import {
+  router
+} from "./checkRoutes.js"
+import {
   loadNerds
 } from "./API.js"
 import {
@@ -9,8 +12,10 @@ import {
 } from "./render.js"
 
 export function routeNerds() {
+
   (async function checkLocalStorage() {
     loadingState('active')
+    router.handle()
     const storage = window.localStorage
     if (storage.getItem("githubRepos") === null) {
       console.log("nog geen data in je localStorage, incoming!")
@@ -25,33 +30,7 @@ export function routeNerds() {
     }
   })()
 
-  routie({
-    '/': () => {
-      updatePage('/')
-    },
-    stats: () => {
-      updatePage('stats')
-    },
-    '/:id': function(id) {
-      const specificId = data.filter(function(item) {
-        return item.id == id
-      })
-      renderNerds.detail(id)
-      updatePage(id)
-    }
-  })
 
-
-  // update page from route
-  function updatePage(route) {
-    const sections = document.querySelectorAll('section')
-    sections.forEach(section => {
-      section.classList.remove('active')
-    })
-    const activeSection = document.querySelector(`[data-route="${route}"]`)
-    console.log(activeSection)
-    activeSection.classList.add('active')
-  }
 }
 
 export default routeNerds
